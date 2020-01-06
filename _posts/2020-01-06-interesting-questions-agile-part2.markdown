@@ -5,7 +5,7 @@ date:   2020-01-06 21:06:00 +0700
 categories: agile
 ---
 
-หลังจากที่ลองตอบคำถามมา 6 ข้อตาม[หลักการของ Agile 12 ข้อ](https://agilemanifesto.org/principles.html)
+หลังจากที่ลอง[ตอบคำถามมา 6 ข้อแรก]({% post_url 2020-01-05-interesting-questions-agile %})ตามหลักการของ Agile 12 ข้อ
 
 น่าจะเห็นอะไรจากคำตอบ ทั้งจากตัวเองและจากทีม
 
