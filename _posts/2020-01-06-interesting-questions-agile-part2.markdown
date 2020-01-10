@@ -2,7 +2,7 @@
 layout: post
 title:  "คำถามที่น่าสนใจในการนำแนวคิด Agile มาใช้ (Part 2)"
 date:   2020-01-06 21:06:00 +0700
-categories: agile
+tags: agile
 ---
 
 หลังจากที่ลอง[ตอบคำถามมา 6 ข้อแรก]({% post_url 2020-01-05-interesting-questions-agile %})ตามหลักการของ Agile 12 ข้อ

@@ -2,7 +2,7 @@
 layout: post
 title:  "คำถามที่น่าสนใจในการนำแนวคิด Agile มาใช้ (Part 1)"
 date:   2020-01-05 13:42:00 +0700
-categories: agile
+tags: agile
 ---
 [จากคำแถลงการณ์ Agile 4 ข้อ](https://agilemanifesto.org/)ที่ทำให้เกิด Mindset ในการทำงานที่ขับเคลื่อนด้วย Feedback และ Continuous Improvement
 
