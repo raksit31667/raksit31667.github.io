@@ -19,11 +19,12 @@ tags: [database-migration, database, flyway]
 - มี plugin กับ framework ที่ใช้ เช่น Java Spring
 - ความสามารถในการ revert หากการ update ล้มเหลว
 
-![Flyway migration](https://flywaydb.org/assets/balsamiq/Migration-1-2.png)
-
 แนะนำ [Flyway](https://flywaydb.org/) สำหรับการทำ database migration โดยจะทำการ create table `flyway_schema_history` ซึ่งเก็บ schema history ไว้
-เพียงแค่เราสร้าง SQL file Flyway ก็จะทำการสร้าง inital state ไว้เป็น milestone เก็บไว้ใน table นั้น หากมีการ update เราก็แค่สร้าง file ใหม่
+เพียงแค่เราสร้าง SQL file ไว้ใน classpath Flyway ก็จะทำการสร้าง inital state ไว้เป็น milestone เก็บไว้ใน table นั้น หากมีการ update เราก็แค่สร้าง file ใหม่
 ที่มี version สูงกว่า Flyway ก็จะเก็บ version ใหม่เป็นลำดับต่อจาก version เก่าต่อไป
+
+![Flyway migration](https://flywaydb.org/assets/balsamiq/Migration-1-2.png)
+*รูปตัวอย่างอธิบายการทำงานของ Flyway [https://flywaydb.org/getstarted/how](https://flywaydb.org/getstarted/how)*
 
 ## Feature
 - **Migrate** ใน Gradle plugin สามารถรันอัตโนมัติเวลาทำการ start application ได้เลย ไม่ต้องรัน command-line
@@ -33,13 +34,13 @@ tags: [database-migration, database, flyway]
 นอกจากนั้นยังมี Info, Validate, และ Repair **ส่วน Undo ต้อง upgrade เป็น Pro version** เสียตังค์ ฮ่าๆๆๆ
 
 ## ข้อควรระวัง
-- ถ้ามีการ migrate ไปแล้วจะไม่สามารถแก้ SQL file ที่มีอยู่ได้ เพราะ Flyway เก็บ checksum ไว้เช็ค
-- สามารถแก้ได้โดยการ clean แต่อย่าทำบน production นะ
+- ถ้ามีการ migrate ไปแล้วจะไม่สามารถแก้ SQL file ที่มีอยู่ได้ เพราะ Flyway เก็บ **checksum** ไว้เช็ค
+- สามารถแก้ได้โดยการ clean **แต่อย่าทำบน production นะ**
 
 > ลองนำไปใช้กันดูครับ ง่ายและมีประโยชน์มากๆ
 
 ## References
-[Flyway official documentation](https://flywaydb.org/)
+[Flyway official documentation](https://flywaydb.org/documentation/)
 
 
 
