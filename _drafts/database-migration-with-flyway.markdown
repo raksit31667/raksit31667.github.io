@@ -16,7 +16,7 @@ tags: [database-migration, database, flyway]
 ดังนั้นทีมจึงต้องป้องกันไม่ให้ปัญหาเหล่านี้เกิดขึ้น โดยการหา tool ที่เหมาะสมมาใช้ โดยควรจะต้องมี  
 - สามารถทำงานได้บนหลาย OS ทั้ง Windows, Linux, และ macOS (แต่จริงๆ แล้ว developer ควรใช้ OS ให้เหมือนกันนะ)
 - สามารถทำงานกับ database หลายๆ เจ้าได้
-- มี plugin กับ framework ที่ใช้
+- มี plugin กับ framework ที่ใช้ เช่น Java Spring
 - ความสามารถในการ revert หากการ update ล้มเหลว
 
 ![Flyway migration](https://flywaydb.org/assets/balsamiq/Migration-1-2.png)
@@ -35,6 +35,11 @@ tags: [database-migration, database, flyway]
 ## ข้อควรระวัง
 - ถ้ามีการ migrate ไปแล้วจะไม่สามารถแก้ SQL file ที่มีอยู่ได้ เพราะ Flyway เก็บ checksum ไว้เช็ค
 - สามารถแก้ได้โดยการ clean แต่อย่าทำบน production นะ
+
+> ลองนำไปใช้กันดูครับ ง่ายและมีประโยชน์มากๆ
+
+## References
+[Flyway official documentation](https://flywaydb.org/)
 
 
 
