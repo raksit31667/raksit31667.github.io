@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "บันทึกการทำ Database migration ด้วย Flyway"
-date:   2020-01-27
+date:   2020-01-29
 tags: [database-migration, database, flyway]
 ---
 วันนี้มีรุ่นพี่ของอีกทีมมาถามว่า จะทำการ copyback (เอา data + schema จาก server หนึ่งไปอีก server หนึ่ง) ยังไง
