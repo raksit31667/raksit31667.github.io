@@ -32,6 +32,7 @@ tags: [architecture, adr]
 
 ประเด็นต่างๆ เหล่านี้จึงเป็นที่มาว่า ทำไมเราถึงต้อง capture การตัดสินใจในบริบทต่างๆ ที่ทำให้เกิดผลตามมา เพื่อเป็นประโยชน์ให้กับสมาชิกใหม่ การตัดสินใจจากคนรุ่นเก่าที่สามารถจับต้องได้ จะเป็น information ที่สำคัญในการเติบโตของ architecture ในทางที่ถูกต้องมากขึ้นนั่นเอง  
 
+## เทคนิคในการ Capture
 สำหรับเทคนิคก็มีหลายแบบ ทั้งการวาด diagram การทำ documentation ก็ขึ้นอยู่กับทีมละ เทคนิคที่ีทีมผมใช้เรียกว่า **Lightweight architecture decision record** ซึ้่งนำมาจาก [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records)  
   
 แทนที่จะเขียน solution architecture เป็นร้อยๆ หน้า ที่มีโอกาสสูงที่จะไม่อัพเดท เขียนเป็น decision log เก็บไว้ใน source code น่าจะดีกว่า
