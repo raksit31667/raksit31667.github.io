@@ -6,17 +6,17 @@ tags: [haproxy, load-balancer]
 ---
 ## Load balancing คืออะไร
 Load balancing คือการส่ง request จาก client ไปยังตัวกลาง (Load balancer) ที่ทำหน้าที่กระจายไปยัง server ต่างๆ ตาม criteria ที่เรากำหนดไว้ ดังนั้นจะไม่มีการ communicate กับระหว่าง client-server โดยตรง ข้อดีของมันคือ
-- Availability ถ้า server ตัวนึงล่มไป เราก็จะส่ง request ไปหา server ตัวอื่นที่ยังอยู่
-- Performance เนื่องจาก server ตัวนึงมีโอกาสที่ไม่ต้องรับ load จากทุกๆ request
+- **Availability** ถ้า server ตัวนึงล่มไป เราก็จะส่ง request ไปหา server ตัวอื่นที่ยังอยู่
+- **Performance** เนื่องจาก server ตัวนึงมีโอกาสที่ไม่ต้องรับ load จากทุกๆ request
 
 มีวิธีการกระจาย request รูปแบบที่ต่างกันไป ตาม algorithm ที่ Load balancer มีหรือเรา config ไว้ เช่น
-- Round robin แต่ละ server ผลัดกันรับ request ตามลำดับ ถ้ารับหมดแล้วก็วนรอบใหม่
-- Least connections ส่ง request ไปยัง server ที่มี connection น้อยที่สุด
-- Random สุ่มแม่ง ฮ่าๆๆๆ
+- **Round robin** แต่ละ server ผลัดกันรับ request ตามลำดับ ถ้ารับหมดแล้วก็วนรอบใหม่
+- **Least connections** ส่ง request ไปยัง server ที่มี connection น้อยที่สุด
+- **Random** สุ่มแม่ง ฮ่าๆๆๆ
 แต่ละวิธีก็จะมีการรองรับในกรณีที่ขนาดของ server ไม่เท่ากันด้วย เพื่อเกลี่ย request ให้ server อย่างเหมาะสม (Weighted)  
 
 ## รูปแบบของ Load balancing
-มี 2 แบบคือ Layer 4 กับ Layer 7 แสดงตาม 7 Layers of OSI ดังนี้  
+มี 2 แบบคือ **Layer 4** กับ **Layer 7** แสดงตาม 7 Layers of OSI ดังนี้  
 
 <รูป>  
 
