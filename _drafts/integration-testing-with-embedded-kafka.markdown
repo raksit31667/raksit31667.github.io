@@ -16,3 +16,5 @@ tags: [spring, kafka, integration-testing]
 ## @AfterEach tearDown close consumer connection
 
 ## @AfterAll close embedded kafka servers
+
+[http://kafka.apache.org/21/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html](http://kafka.apache.org/21/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
