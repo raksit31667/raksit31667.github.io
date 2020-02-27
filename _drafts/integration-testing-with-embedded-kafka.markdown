@@ -10,7 +10,7 @@ tags: [spring, kafka, integration-testing]
 ## ขั้นตอนที่ 0 ติดตั้ง dependencies กันก่อน
 มี 2 ตัวคือ 
 - `org.springframework.kafka:spring-kafka` สำหรับ implementation
-- `org.springframework.kafka:spring-kafka-test` สำหรับการทดสอบ
+- `org.springframework.kafka:spring-kafka-test` สำหรับการทดสอบด้วย Embedded kafka server
 
 ซึ่งปัจจุบันใน version 2.4.x อ้างอิงจาก [doc](https://docs.spring.io/spring-kafka/reference/html/#deps-for-24x) จะต้องทำการ override Kafka dependencies จาก Spring Boot ตามนี้  
 
