@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "บันทึกการทำ Integration testing ด้วย Spring Embedded Kafka"
-date:   2020-02-24
+date:   2020-03-07
 tags: [spring, kafka, integration-testing]
 ---
 
