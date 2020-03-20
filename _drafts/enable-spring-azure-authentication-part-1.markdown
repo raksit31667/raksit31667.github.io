@@ -31,6 +31,7 @@ tags: [spring, azure, security]
 - Resource Server หมายถึง server ที่ทำการ validate JWT โดยใช้ JWK ซึ่งได้รับมาจาก authorization server
 
 เราจะในคำเหล่านี้มาร้อยกันเป็น flow ของ token-based authentication ที่สามารถอธิบายได้ตามรูปนี้เลย
+![JWT Authentication Explained](/assets/2020-03-20-jwt-authentication-explained.png)
 [https://redthunder.blog/2017/06/08/jwts-jwks-kids-x5ts-oh-my/](https://redthunder.blog/2017/06/08/jwts-jwks-kids-x5ts-oh-my/)
 
 ใน flow นี้ยังไม่ได้ครอบคลุมตัวอย่างที่เรากำลังจะทำทั้งหมดนะครับ มันยังมีบางอย่างที่เป็น behind the scene เช่น
