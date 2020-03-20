@@ -92,3 +92,7 @@ Azure access token จะแบ่งเป็น 3 ส่วน แต่ละ
 3. client ส่ง request มาตามนี้
 
 <script src="https://gist.github.com/raksit31667/7a6f16fa99ffd89795440c72ba177178.js"></script>
+
+> ขอจบ blog ไว้เท่านี้ก่อนละกัน blog หน้าจะมาต่อเรื่องนี้แหละครับ แต่จะเป็นการเขียน test เพื่อทดสอบ authentication ของเรากัน
+
+> ไปดูตัวอย่างโค้ด [https://github.com/raksit31667/example-spring-order](https://github.com/raksit31667/example-spring-order)
