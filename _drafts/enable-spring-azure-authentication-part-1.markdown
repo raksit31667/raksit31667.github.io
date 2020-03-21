@@ -22,21 +22,21 @@ tags: [spring, azure, security]
 - User สามารถ create Order ได้ (Write access)
 - User สามารถ find Order จาก id และ query parameters ได้ (Read access)
 
-### อธิบาย JWK, JWT, Issuer, tokenStore, Azure AD, authorization server, resource server
-- JSON Web Token (JWT) หมายถึง ข้อมูลที่ระบุ identity ของ client ในรูปแบบของ JSON ซึ่งถูกเข้ารหัส (sign) เป็น token
-- JSON Web Signature (JWS) หมายถึง signature ที่เกิดจากการ sign JWT ด้วย authorization server 
-- JSON Web Key (JWK) หมายถึง ข้อมูลที่ใช้ในการ validate JWS ในรูปแบบของ JSON ซึ่งมันคือ public key ที่ได้รับมาจาก authorization server
-- JSON Web Key Set (JWKS) หมายถึง ชุดของ JWK ที่เก็บใน resource server
-- Authorization Server (Identity Provider) หมายถึง server ที่ทำการ sign JWT จาก request ของ client
-- Resource Server หมายถึง server ที่ทำการ validate JWT โดยใช้ JWK ซึ่งได้รับมาจาก authorization server
+### ก่อนจะเริ่มก็ทำความเข้าใจ token-based authentication ซะหน่อย
+- **JSON Web Token (JWT)** หมายถึง ข้อมูลที่ระบุ identity ของ client ในรูปแบบของ JSON ซึ่งถูกเข้ารหัส (sign) เป็น token
+- **JSON Web Signature (JWS)** หมายถึง signature ที่เกิดจากการ sign JWT ด้วย authorization server 
+- **JSON Web Key (JWK)** หมายถึง ข้อมูลที่ใช้ในการ validate JWS ในรูปแบบของ JSON ซึ่งมันคือ public key ที่ได้รับมาจาก authorization server
+- **JSON Web Key Set (JWKS)** หมายถึง ชุดของ JWK ที่เก็บใน resource server
+- **Authorization Server** (Identity Provider) หมายถึง server ที่ทำการ sign JWT จาก request ของ client
+- **Resource Server** หมายถึง server ที่ทำการ validate JWT โดยใช้ JWK ซึ่งได้รับมาจาก authorization server
 
 เราจะในคำเหล่านี้มาร้อยกันเป็น flow ของ token-based authentication ที่สามารถอธิบายได้ตามรูปนี้เลย
 ![JWT Authentication Explained](/assets/2020-03-20-jwt-authentication-explained.png)
 [https://redthunder.blog/2017/06/08/jwts-jwks-kids-x5ts-oh-my/](https://redthunder.blog/2017/06/08/jwts-jwks-kids-x5ts-oh-my/)
 
 ใน flow นี้ยังไม่ได้ครอบคลุมตัวอย่างที่เรากำลังจะทำทั้งหมดนะครับ มันยังมีบางอย่างที่เป็น behind the scene เช่น
-- JWK Token Store หมายถึง ที่จัดเก็บ JWT ตั้งอยู่ใน resource server ที่ได้รับมาจาก client ใช้สำหรับ decode JWT และ verify JWS ด้วย JWK
-- Token Issuer หมายถึง web หรือบริษัทที่เป็นเจ้าของ JWT ซึ่งในตัวอย่างเราจะใช้ Azure นั่นเอง
+- **JWK Token Store** หมายถึง ที่จัดเก็บ JWT ตั้งอยู่ใน resource server ที่ได้รับมาจาก client ใช้สำหรับ decode JWT และ verify JWS ด้วย JWK
+- **Token Issuer** หมายถึง web หรือบริษัทที่เป็นเจ้าของ JWT ซึ่งในตัวอย่างเราจะใช้ Microsoft Azure นั่นเอง
 
 > ตัวย่อแม่งจะเยอะไปไหน...
 
@@ -67,12 +67,17 @@ Azure access token จะแบ่งเป็น 3 ส่วน แต่ละ
 - สร้าง method ที่มีชื่อว่า `hasApplicationRole` เริ่มจาก get JWT จาก client ซึ่งมันจะ wrap อยู่ใน `AuthenticationDetails` ของ class  `Authentication` อีกที ต้อง check ด้วยว่าเป็น `OAuth2AuthenticationDetails` ด้วยนะ
 - ต่อมาทำการ decode JWT แล้วก็ check `roles` claim ว่ามี Read หรือ Write ไหม
 
-### configure ให้ Global security method ใช้ hasApplicationRole ใน JWT validator
+### Configure ให้ Global security method ใช้ hasApplicationRole ใน JWT validator
 <script src="https://gist.github.com/raksit31667/e3fe0dafabae9347b3c9e8b9cc52e940.js"></script>
 **คำอธิบาย**
 - ในส่วนนี้เราต้องใส่ flag `prePostEnabled = true` ด้วย เพราะว่าเราจะ validate authorization ก่อนเข้า method ใน Spring controller ครับ
+- ต้อง inject Spring `ApplicationContext` เข้ากับตัว handler ของเราด้วยครับ ไม่งั้นจะเจอ error แบบนี้
 
-### configure resource server ด้วย OAuth2SecurityConfiguration
+```
+ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+```
+
+### Configure resource server ด้วย OAuth2SecurityConfiguration
 <script src="https://gist.github.com/raksit31667/d1d266bf42651706b59a816d420ff6fd.js"></script>
 **คำอธิบาย**
 - ใช้ `jwkTokenStore` ในการ verify issuer จาก `iss` claim ใน JWT โดยใช้ JWK ที่อยู่ใน JWK set ตาม uri
@@ -90,7 +95,9 @@ Azure access token จะแบ่งเป็น 3 ส่วน แต่ละ
 1. เจ้าของ resource server ต้องไป [configure application](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps) รวมถึง roles (ตัวอย่างคือ Read และ Write) ใน Azure Active Directory (Azure AD)
 2. client ทำการสร้าง client secret ขึ้นมาใน Azure AD application เพื่อใช้เป็นส่วนหนึ่งในการ request ขอ JWT
 3. client ส่ง request มาตามนี้
+![Postman Access Token](/assets/2020-03-20-postman-get-access-token.png)
 
+4. นำ access token ที่ได้ไป request ที่ API ได้เลย เป็นอันเสร็จพิธี
 <script src="https://gist.github.com/raksit31667/7a6f16fa99ffd89795440c72ba177178.js"></script>
 
 > ขอจบ blog ไว้เท่านี้ก่อนละกัน blog หน้าจะมาต่อเรื่องนี้แหละครับ แต่จะเป็นการเขียน test เพื่อทดสอบ authentication ของเรากัน
