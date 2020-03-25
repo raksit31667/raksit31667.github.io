@@ -2,7 +2,7 @@
 layout: post
 title:  "มาทำ API Security ใน Spring Boot ตาม OWASP API Security Project กัน (Part 2)"
 date:   2020-03-21
-tags: [spring, integration-testing, security]
+tags: [spring, integration-testing, owasp, security]
 ---
 blog นี้จะมาต่อจาก [Part 1]({% post_url 2020-01-05-interesting-questions-agile %}) ในส่วนของการทดสอบ authentication  
 
