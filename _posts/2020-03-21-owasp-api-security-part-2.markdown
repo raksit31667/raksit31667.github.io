@@ -4,7 +4,7 @@ title:  "มาทำ API Security ใน Spring Boot ตาม OWASP API Securi
 date:   2020-03-21
 tags: [spring, integration-testing, owasp, security]
 ---
-blog นี้จะมาต่อจาก [Part 1]({% post_url 2020-01-05-interesting-questions-agile %}) ในส่วนของการทดสอบ authentication  
+blog นี้จะมาต่อจาก [Part 1]({% post_url 2020-03-18-owasp-api-security-part-1 %}) ในส่วนของการทดสอบ authentication  
 
 ซึ่งตัวอย่างนี้ผมจะใช้ `RestAssured` ในส่วนของ test script หลัก ส่วน `Spring Security OAuth2 AutoConfigure` และ `java-jwt` สำหรับการเตรียม environment
 <script src="https://gist.github.com/raksit31667/cd506ad38cb823d39e14c5d730e9c0e2.js"></script>
