@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "นำ Docker image จาก non-production ขึ้น production cluster บน OpenShift"
-date:   2020-04-16
+date:   2020-04-22
 tags: [docker, openshift, jenkins, skopeo]
 ---
 วันนี้จะมาแบ่งปันเรื่องการนำ docker image ขึ้นงานบน production หลังจากผ่านการ build ในระบบ Continuous integration จาก non-production มาแล้ว งานที่ทำอยู่ใช้ OpenShift เป็น container platform deploy ใช้เองในบริษัท (เป็น on-premise อ่ะนะ)  
