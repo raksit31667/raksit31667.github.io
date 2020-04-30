@@ -87,7 +87,7 @@ service principal สำหรับ AKS กับ datadog api key app key
 
 **code**
 
-![Azure DevOps artifacts](/assets/2020-04-30-tfstate-blob-storage-account.png)
+![Azure DevOps artifacts](/assets/2020-04-30-azure-devops-final-artifacts.png)
 
 ### 7. สร้าง Kubernetes namespace สำหรับ Datadog cluster agent 
 
@@ -96,3 +96,11 @@ service principal สำหรับ AKS กับ datadog api key app key
 ### 8. ติดตั้ง Datadog agents โดยใช้ Helm
 
 **code**
+
+![Helm datadog terraform plan 1](/assets/2020-04-30-helm-datadog-agent-1.png)
+![Helm datadog terraform plan 2](/assets/2020-04-30-helm-datadog-agent-2.png)
+
+### End
+![Azure DevOps pipeline completed stages](/assets/2020-04-30-azure-devops-final-stages.png)
+![DataDog metrics explorer](/assets/2020-04-30-datadog-metric-explorer.png)
+
