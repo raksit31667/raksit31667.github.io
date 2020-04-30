@@ -55,8 +55,8 @@ blog นี้จะมา deploy Azure Kubernetes Service (AKS) บน Azure cl
 
 **code**
 
-![Terraform archive task](/assets/2020-04-30/2020-04-30-terraform-archive-1.png)
-![Terraform archive file](/assets/2020-04-30/2020-04-30-terraform-archive-2.png)
+![Terraform archive task](/assets/2020-04-30/2020-04-30-add-terraform-archive-task.png)
+![Terraform archive artifact](/assets/2020-04-30/2020-04-30-terraform-archive-artifact.png)
 
 ![Init-validate-plan](/assets/2020-04-30/2020-04-30-init-validate-plan.png)
 
@@ -64,8 +64,8 @@ blog นี้จะมา deploy Azure Kubernetes Service (AKS) บน Azure cl
 
 **code**
 
-![Add approval step 1](/assets/2020-04-30/2020-04-30-add-approval-1.png)
-![Add approval step 2](/assets/2020-04-30/2020-04-30-add-approval-2.png)
+![Add approval step 1](/assets/2020-04-30/2020-04-30-azure-devops-add-approval-1.png)
+![Add approval step 2](/assets/2020-04-30/2020-04-30-azure-devops-add-approval-2.png)
 
 Error: Failed to instantiate provider "azurerm" to obtain schema: fork/exec /home/vsts/work/1/s/.terraform/plugins/linux_amd64/terraform-provider-azurerm_v2.7.0_x5: permission denied  
 
@@ -75,7 +75,7 @@ Error: Failed to instantiate provider "azurerm" to obtain schema: fork/exec /hom
 
 ![Add bash task](/assets/2020-04-30/2020-04-30-grant-terraform-file-read-permission.png)
 
-![Add approval step 3](/assets/2020-04-30/2020-04-30-add-approval-3.png)
+![Pending for approval](/assets/2020-04-30/2020-04-30-azure-devops-pending-approval.png)
 
 ### 5. สร้าง AKS บน resource group จากขั้นตอนที่ 2
 
