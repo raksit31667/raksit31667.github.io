@@ -6,7 +6,7 @@ tags: [azure, aks, datadog, terraform]
 ---
 blog นี้จะมา deploy Azure Kubernetes Service (AKS) บน Azure cloud ซึ่งจะใช้ Datadog เป็น logging / monitoring โดยหลักการคร่าวๆ ของ Datadog คือ เราติดตั้ง agent เพื่อให้ส่ง log และ metrics ต่างๆ ให้กับ Datadog (push model) ซึ่งจะต่างจาก Prometheus ที่จะมี server ไปเก็บ metrics มาจาก service discovery (Pull model)  
 
-![Datadog agents](/assets/2020-04-30-datadog-agents.png)
+![Datadog agents](/assets/2020-04-30/2020-04-30-datadog-agents.png)
 <https://www.datadoghq.com/blog/monitoring-kubernetes-with-datadog/>  
 
 เราจะต้อง deploy 2 agents ได้แก่
@@ -28,8 +28,8 @@ blog นี้จะมา deploy Azure Kubernetes Service (AKS) บน Azure cl
 - Setup storage account สำหรับเก็บ `tfstate` file สำหรับใช้ในการ plan ใน build ครั้งถัดๆ ไป โดยที่ไม่ต้อง configure `backend` เลย
 - ติดตั้ง Terraform CLI มาพร้อมกับ command ในรูปแบบ declarative เข้าใจง่ายกว่า bash script ที่เขียนเองอย่างแน่นอน
 
-![Terraform extension task 1](/assets/2020-04-30-terraform-extension-task-1.png)
-![Terraform extension task 2](/assets/2020-04-30-terraform-extension-task-2.png)
+![Terraform extension task 1](/assets/2020-04-30/2020-04-30-terraform-extension-task-1.png)
+![Terraform extension task 2](/assets/2020-04-30/2020-04-30-terraform-extension-task-2.png)
 
 เลือก Task เป็น Terraform จาก extension และใส่ข้อมูลลงไป add แล้วจะได้ code มาประมาณนี้
 
@@ -46,7 +46,7 @@ blog นี้จะมา deploy Azure Kubernetes Service (AKS) บน Azure cl
 
 สร้าง Azure resource group ซึ่งจะเก็บ AKS ของเรา ไว้เช็คดูว่า steps มันรันผ่านไหม
 
-![tfstate blob storage account](/assets/2020-04-30-tfstate-blob-storage-account.png)
+![tfstate blob storage account](/assets/2020-04-30/2020-04-30-tfstate-blob-storage-account.png)
 
 **code**
 
@@ -55,17 +55,17 @@ blog นี้จะมา deploy Azure Kubernetes Service (AKS) บน Azure cl
 
 **code**
 
-![Terraform archive task](/assets/2020-04-30-terraform-archive-1.png)
-![Terraform archive file](/assets/2020-04-30-terraform-archive-2.png)
+![Terraform archive task](/assets/2020-04-30/2020-04-30-terraform-archive-1.png)
+![Terraform archive file](/assets/2020-04-30/2020-04-30-terraform-archive-2.png)
 
-![Init-validate-plan](/assets/2020-04-30-init-validate-plan.png)
+![Init-validate-plan](/assets/2020-04-30/2020-04-30-init-validate-plan.png)
 
 ### 4. เพิ่ม approval stage และ Terraform apply จาก file ที่เราเก็บไว้ในขั้นตอนที่แล้ว
 
 **code**
 
-![Add approval step 1](/assets/2020-04-30-add-approval-1.png)
-![Add approval step 2](/assets/2020-04-30-add-approval-2.png)
+![Add approval step 1](/assets/2020-04-30/2020-04-30-add-approval-1.png)
+![Add approval step 2](/assets/2020-04-30/2020-04-30-add-approval-2.png)
 
 Error: Failed to instantiate provider "azurerm" to obtain schema: fork/exec /home/vsts/work/1/s/.terraform/plugins/linux_amd64/terraform-provider-azurerm_v2.7.0_x5: permission denied  
 
@@ -73,9 +73,9 @@ Error: Failed to instantiate provider "azurerm" to obtain schema: fork/exec /hom
 
 **code**
 
-![Add bash task](/assets/2020-04-30-grant-terraform-file-read-permission.png)
+![Add bash task](/assets/2020-04-30/2020-04-30-grant-terraform-file-read-permission.png)
 
-![Add approval step 3](/assets/2020-04-30-add-approval-3.png)
+![Add approval step 3](/assets/2020-04-30/2020-04-30-add-approval-3.png)
 
 ### 5. สร้าง AKS บน resource group จากขั้นตอนที่ 2
 
@@ -83,11 +83,11 @@ Error: Failed to instantiate provider "azurerm" to obtain schema: fork/exec /hom
 
 ### 6. เพิ่ม stage สร้าง Terraform tfvars file สำหรับ assign variable ลงไป
 service principal สำหรับ AKS กับ datadog api key app key
-![Azure DevOps variables](/assets/2020-04-30-azure-devops-pipeline-variables.png)
+![Azure DevOps variables](/assets/2020-04-30/2020-04-30-azure-devops-pipeline-variables.png)
 
 **code**
 
-![Azure DevOps artifacts](/assets/2020-04-30-azure-devops-final-artifacts.png)
+![Azure DevOps artifacts](/assets/2020-04-30/2020-04-30-azure-devops-final-artifacts.png)
 
 ### 7. สร้าง Kubernetes namespace สำหรับ Datadog cluster agent 
 
@@ -97,10 +97,10 @@ service principal สำหรับ AKS กับ datadog api key app key
 
 **code**
 
-![Helm datadog terraform plan 1](/assets/2020-04-30-helm-datadog-agent-1.png)
-![Helm datadog terraform plan 2](/assets/2020-04-30-helm-datadog-agent-2.png)
+![Helm datadog terraform plan 1](/assets/2020-04-30/2020-04-30-helm-datadog-agent-1.png)
+![Helm datadog terraform plan 2](/assets/2020-04-30/2020-04-30-helm-datadog-agent-2.png)
 
 ### End
-![Azure DevOps pipeline completed stages](/assets/2020-04-30-azure-devops-final-stages.png)
-![DataDog metrics explorer](/assets/2020-04-30-datadog-metric-explorer.png)
+![Azure DevOps pipeline completed stages](/assets/2020-04-30/2020-04-30-azure-devops-final-stages.png)
+![DataDog metrics explorer](/assets/2020-04-30/2020-04-30-datadog-metric-explorer.png)
 
