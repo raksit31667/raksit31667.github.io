@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deploy AKS cluster พร้อมกับ Datadog agent ผ่าน Terraform"
-date:   2020-04-24
+date:   2020-04-30
 tags: [azure, aks, datadog, terraform]
 ---
 blog นี้จะมา deploy Azure Kubernetes Service (AKS) บน Azure cloud ซึ่งจะใช้ Datadog เป็น logging / monitoring โดยหลักการคร่าวๆ ของ Datadog คือ เราติดตั้ง agent เพื่อให้ส่ง log และ metrics ต่างๆ ให้กับ Datadog (push model) ซึ่งจะต่างจาก Prometheus ที่จะมี server ไปเก็บ metrics มาจาก service discovery (Pull model)  
