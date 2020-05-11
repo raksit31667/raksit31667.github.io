@@ -15,4 +15,4 @@ tags: [python]
 2. `pyenv` จะไปหา executable file ที่เรียกว่า `shims` ที่มีชื่อตรงกับคำสั่งเราจากข้อ 1 ถ้าอย่างของ `pip` ก็จะเจอประมาณนี้ `/Users/raksit/.pyenv/shims/pip`
 3. รัน `shims` ตัวนั้นโดย pass คำสั่งและ argument จาก `pyenv` ลงไป
 
-<script id="asciicast-yYXkqqk0jEgWJ3U3700mb9GoQ" src="https://asciinema.org/a/yYXkqqk0jEgWJ3U3700mb9GoQ.js" async></script>
+<script id="asciicast-329178" src="https://asciinema.org/a/329178.js" async></script>
