@@ -6,7 +6,9 @@ tags: [end-to-end-testing, cucumber]
 ---
 ว่างๆ ผมคิดดูว่าถ้าเราจะทำ end-to-end testing กับระบบปัจจุบันของเราที่ประกอบไปด้วย API และ Kafka น่าจะมี tool ให้เลือกใช้อยู่บ้าง งั้นลองใช้ Cucumber ซึ่งเป็น behavior-driven-development (BDD) ดู น่าจะช่วยทำให้ development team ทำงานด้วยกันได้ง่ายขึ้น เนื่องจากภาษาที่ใช้เขียนเป็น Given-When-Then แบบคนธรรมดาเข้าใจได้เลย
 
-![Trigger result](/assets/2020-05-04-azure-devops-trigger-result.png)
+![Trigger result](/assets/2020-06-13-example-e2e-diagram.jpg)
+  
+<https://www.melvinvivas.com/developing-microservices-using-kafka-and-mongodb/>
 
 ## Cucumber มีส่วนประกอบคร่าวๆ อยู่ 2 ส่วน
 - Feature ไว้กำหนด scenario เขียนโดยใช้ Gherkin syntax เช่น กำหนดตัวแปรของ test หรือจัดกลุ่มโดยใช้ `@tags`
@@ -75,5 +77,5 @@ Scenario: Happy path                                          # src/test/resourc
 4 Steps (4 passed)
 0m6.729s
 ```
-
+  
 > code ตัวอย่าง <https://github.com/raksit31667/example-cucumber-restassured-kafka>
