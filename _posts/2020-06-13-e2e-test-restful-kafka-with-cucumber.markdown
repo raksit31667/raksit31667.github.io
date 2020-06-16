@@ -77,5 +77,7 @@ Scenario: Happy path                                          # src/test/resourc
 4 Steps (4 passed)
 0m6.729s
 ```
+
+![Trigger result](/assets/2020-06-16-example-e2e-test-results.png)
   
 > code ตัวอย่าง <https://github.com/raksit31667/example-cucumber-restassured-kafka>
