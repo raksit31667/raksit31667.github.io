@@ -13,14 +13,22 @@ tags: [databricks, spark]
 - Currently, spark.cleaner.periodicGC.interval will trigger every 30 minutes(default). In our use case, job is triggering for every 1 minute So we need to decrease the spark.cleaner.periodicGC.interval config value. Set the below line in the cluster level configuration.
 
 ```
-spark.cleaner.periodicGC.interval 15min
+spark.cleaner.periodicGC.interval (default 30 mins) -> not necessary
+```
+
+```
+spark.gracefullyShutdown for streaming -> necessary because it will affect checkpoints (not helpful)
 ```
 
 - Some other application is also running in the cluster. Currently, 4 jobs are running in the same cluster which will affect the performance of the jobs. We need to provide a good amount of resources(CPU and memory) for a cluster to get a good performance on the jobs.
 
-- Since we catch a failure of the library installed( Currently using the com.azure:com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.13). Please use the below library. com.azure:com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.15
+- Since we catch a failure of the library installed( Currently using the com.azure:com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.13). Please use the below library. com.azure:com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.15 -> double check what bugs he mentioned, always used the latest version
 
 ## LimitExceededException from writing too large text data into EventLog
+Save plain JSON string into DF
 ```
-spark.conf.set("spark.eventLog.unknownRecord.maxSize","4m")
+spark.conf.set("spark.eventLog.unknownRecord.maxSize","16m")
 ```
+
+### EpochException (TBC)
+Duplicated consumer groups in one EventHub entity
