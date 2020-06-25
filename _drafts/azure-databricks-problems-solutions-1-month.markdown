@@ -27,9 +27,23 @@ Our system contained 4 jobs running on a single interactive cluster, some of the
 - Regardless of cluster size, Spark driver functionalities (including logs) cannot be distinguished within a cluster. That is why we found mixed logs from every running jobs.
 
 
-## Send Standard output and Standard error from Databricks to application insights directly
-- There is no supported method to send Standard output and Standard error from Databricks to application insights directly.
-- I have found a document https://github.com/AdamPaternostro/Azure-Databricks-Log4J-To-AppInsights which shows how to send log4j logs to application insights and I have tested for that, it works.
+## Sending Standard output and Standard error from Databricks to Application Insights directly
+
+### Problems
+We would like to send logging from all Databricks clusters to Application Insights by configuring custom `log4j` appender.
+<script src="https://gist.github.com/raksit31667/35519cc15087b21ef1d7daeb56cdaf9b.js"></script>
+<script src="https://gist.github.com/raksit31667/6f349283fe5647969bc24a0d97a5a10f.js"></script>
+
+However, Spark job could not find `TelemetryConfiguration` after the library `com.microsoft.azure:applicationinsights-logging-log4j1_2:2.5.1` is uploaded.
+
+![Telemetry Exception](/assets/2020-06-26-telemetry-exception.png)
+
+### Resolutions
+- There is no supported method to send Standard output and Standard error from Databricks to Application Insights directly.
+- We saved Spark driver logs to [Databricks File System](https://docs.databricks.com/data/databricks-file-system.html) (DBFS). Still, this is not an idea solution because of poor discoverability.
+- There is a repository https://github.com/AdamPaternostro/Azure-Databricks-Log4J-To-AppInsights which shows how to send log4j logs to Application Insights.
+
+![DBFS logging](/assets/2020-06-26-cluster-logging-dbfs.png)
 
 
 ## LimitExceededException from writing too large text data into EventLog
