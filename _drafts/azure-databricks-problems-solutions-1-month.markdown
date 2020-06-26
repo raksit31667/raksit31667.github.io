@@ -46,11 +46,24 @@ However, Spark job could not find `TelemetryConfiguration` after the library `co
 ![DBFS logging](/assets/2020-06-26-cluster-logging-dbfs.png)
 
 
-## LimitExceededException from writing too large text data into EventLog
-Save plain JSON string into DF
+## LimitExceededException from writing too large text data
+
+### Problems
+There were some jobs processing large JSON data retrieved from EventHub throwing the following exception:
+
 ```
-spark.conf.set("spark.eventLog.unknownRecord.maxSize","16m")
+com.databricks.spark.util.LimitedOutputStream$LimitExceededException: Exceeded 2097152 bytes (current = 2099270)
+
+com.fasterxml.jackson.databind.JsonMappingException: Exceeded 2097152 bytes (current = 2099270) (through reference chain: org.apache.spark.sql.execution.ui.SparkListenerSQLExecutionStart['physicalPlanDescription'])
 ```
+
+### Resolutions
+Scale up maximum size of Spark capacity to handle Event Log `spark.conf.set("spark.eventLog.unknownRecord.maxSize","16m")`. 
+Strangely, the in-code configuration was ineffective, so we needed to configure via Databricks Job API instead.
+
+<script src="https://gist.github.com/raksit31667/5470694c946b943c8a6e786137a20632.js"></script>
+
+<script src="https://gist.github.com/raksit31667/7c38d2c9a0c69de37c178455f6c48f81.js"></script>
 
 ### EpochException (TBC)
 Duplicated consumer groups in one EventHub entity
