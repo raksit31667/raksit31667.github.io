@@ -65,5 +65,12 @@ Strangely, the in-code configuration was ineffective, so we needed to configure 
 
 <script src="https://gist.github.com/raksit31667/7c38d2c9a0c69de37c178455f6c48f81.js"></script>
 
-### EpochException (TBC)
+
+## EpochException (TBC)
+
+### Problems
 Duplicated consumer groups in one EventHub entity
+
+### Resolutions
+- Limit EventHub stream by storing EventHub messages in DBFS as Parquet format.
+- Create an another stream to read from DBFS and continue logging streams.
