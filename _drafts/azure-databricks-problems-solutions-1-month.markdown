@@ -66,11 +66,23 @@ Strangely, the in-code configuration was ineffective, so we needed to configure 
 <script src="https://gist.github.com/raksit31667/7c38d2c9a0c69de37c178455f6c48f81.js"></script>
 
 
-## EpochException (TBC)
+## ReceiverDisconnectedException
 
 ### Problems
-Duplicated consumer groups in one EventHub entity
+This exception was thrown if there are more than one Epoch receiver connecting to the same partition with different epoch values.
+
+<script src="https://gist.github.com/raksit31667/6a4ee08031c1464bfb43f380eafee574.js"></script>
+
+According to [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-event-processor-host#epoch), 
+by using `com.azure:com.microsoft.azure:azure-eventhubs-spark_2.12` version 2.3.2 and above, the existing epoch receiver will be disconnected if we create a new receiver which consumer from the same consumer group with an **epoch value < existing epoch value**.
+
+Therefore, we have to be assured that our streaming application contain **only one** consumer group per Spark session being run.
 
 ### Resolutions
-- Limit EventHub stream by storing EventHub messages in DBFS as Parquet format.
-- Create an another stream to read from DBFS and continue logging streams.
+- Limit EventHub stream by storing EventHub messages in DBFS as Parquet format. Then, create an another stream to read from DBFS and continue logging streams.
+
+<script src="https://gist.github.com/raksit31667/9036fe8cadbe11c5da8a47e44360eb11.js"></script>
+
+For the [production grade](https://docs.databricks.com/spark/latest/structured-streaming/production.html#optimize-performance-of-stateful-streaming-queries), it is recommended to replace in-memory DBFS with other persistent storages, such as [RocksDB](https://rocksdb.org/).
+
+- If we want to write the output of streaming query to multiple streaming data sources (i.e. logging and database) using `foreachBatch` or `foreach`, be mindful that output can be recomputed (and even reread the input) every time we attempt write the output. Leveraging `DataFrame` cache will avoid this issue.
