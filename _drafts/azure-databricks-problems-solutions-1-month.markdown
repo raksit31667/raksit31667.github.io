@@ -85,4 +85,6 @@ Therefore, we have to be assured that our streaming application contain **only o
 
 For the [production grade](https://docs.databricks.com/spark/latest/structured-streaming/production.html#optimize-performance-of-stateful-streaming-queries), it is recommended to replace in-memory DBFS with other persistent storages, such as [RocksDB](https://rocksdb.org/).
 
+![DBFS logging](/assets/2020-06-29-databricks-monitoring.png)
+
 - If we want to write the output of streaming query to multiple streaming data sources (i.e. logging and database) using `foreachBatch` or `foreach`, be mindful that output can be recomputed (and even reread the input) every time we attempt write the output. Leveraging `DataFrame` cache will avoid this issue.
