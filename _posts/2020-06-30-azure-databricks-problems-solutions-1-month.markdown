@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Experience Using Azure Databricks at ExxonMobil for a month"
-date:   2020-06-10
+date:   2020-06-30
 tags: [azure, databricks, spark]
 ---
 ## Full GC causes driver crashed with an OOM exception
