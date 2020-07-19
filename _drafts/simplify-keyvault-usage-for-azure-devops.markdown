@@ -31,3 +31,13 @@ Development ที่เข้ามาใหม่เริ่มรู้ส�
 ![ADO VarGroups 3](/assets/2020-07-19-azure-devops-variable-groups-3.png)
 
 ![ADO VarGroups 4](/assets/2020-07-19-azure-devops-variable-groups-4.png)
+
+3. แล้วเราก็เรียก Variables ผ่าน Azure DevOps pipeline script ได้เลย
+
+<script src="https://gist.github.com/raksit31667/ab44ba0410543532bd68165c9a00d237.js"></script>
+
+ในกรณีที่เรามี Variable groups ใช้ร่วมกับ Variable ปกติ เราจะต้องแยกออกจากกันด้วย syntax ประมาณนี้
+
+<script src="https://gist.github.com/raksit31667/b8cdfa58abf24da2687f34773b424e2c.js"></script>
+
+> ดูเพิ่มเติมได้ที่ <https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml> เลยครับ
