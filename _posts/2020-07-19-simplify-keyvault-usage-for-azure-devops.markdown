@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ลดความซับซ้อนในการใช้ Azure KeyVault ใน Azure DevOps ด้วย Variable groups"
-date:   2020-07-17
+date:   2020-07-19
 tags: [azure-devops, azure-keyvault]
 ---
 
