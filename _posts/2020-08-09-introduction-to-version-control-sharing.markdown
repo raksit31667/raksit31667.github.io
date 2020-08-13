@@ -55,6 +55,11 @@ tags: [version-control, git, cicd]
 
 ยังไม่รวมพวก [git-standup](https://github.com/kamranahmedse/git-standup) หรือ [oh-my-zsh](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Zsh) นะ มีอีกเยอะ
 
+## Feedback ที่ได้
+- สอนเร็วเกินไป
+- มี Interaction กับคนเรียนมากกว่านี้หน่อย
+- ทำตามไม่ได้เนื่องจากใช้คำสั่งบางอย่างใน Linux (audience ส่วนใหญ่ใช้ Windows) เช่น `mkdir` หรือ `ls`
+
 > ตัวอย่างโปรเจคที่ใช้ demo <https://github.com/raksit31667/git-practice>
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/eOxNBTUcxykov4" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/RaksitMantanacharu/introduction-to-version-control-237691099" title="Introduction to Version Control" target="_blank">Introduction to Version Control</a> </strong> from <strong><a href="https://www.slideshare.net/RaksitMantanacharu" target="_blank">RaksitMantanacharu</a></strong> </div>
