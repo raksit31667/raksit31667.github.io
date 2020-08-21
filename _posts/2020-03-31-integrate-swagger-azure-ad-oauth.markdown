@@ -31,6 +31,7 @@ tags: [swagger, azure, security, oauth, spring]
 - เพิ่ม url ของ Springfox สำหรับการ redirect ใน browser หลังจากทำ authentication สำเร็จ (**https://your-service-host-name.com/webjars/springfox-swagger-ui/oauth2-redirect.html**)
 - ติ๊กตรง **ID tokens** ใน **Implicit grant** เพราะว่า Azure จะให้ token ของ User identity ที่ click **Authorize** จาก Swagger UI ไม่เกี่ยวกับ Access tokens ที่ client ใช้ในการ access Resource Server ของเรา 
 - ดังนั้นเราต้องไป grant user คนนั้นให้มี permission ในการ access ด้วย โดยไปที่ **Enterprise applications --> your-application-name --> Users and groups** (ทำตาม [documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/assign-user-or-group-access-portal) นี้เลยครับ)
+- อย่าลืม configure `oauth2AllowImplicitFlow` ใน **App Registration -> Manifest** ให้เป็น `true` ด้วยนะครับ (ดูตาม [documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-app-manifest#oauth2allowimplicitflow-attribute) นี้เลย)
 
 ### Configure Azure AD information ใน API ของเรา
 เราต้องการ 2 อย่างคือ resource id (ดูได้จาก application ของ API) และ tenant id
