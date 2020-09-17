@@ -18,7 +18,7 @@ Load balancing คือการส่ง request จาก client ไปยั
 ## รูปแบบของ Load balancing
 มี 2 แบบคือ **Layer 4** กับ **Layer 7** แสดงตาม 7 Layers of OSI ดังนี้  
 
-![7 Layers of OSI Model](/assets/2020-02-17-seven-layers-of-osi-model.png)
+![7 Layers of OSI Model](/assets/2020-02-17-seven-layers-of-OSI-model.png)
 [https://viettechgroup.vn/tcp-ip-vs-osi-whats-the-difference-between-the-two-models.nvp](https://viettechgroup.vn/tcp-ip-vs-osi-whats-the-difference-between-the-two-models.nvp)
 
 ## ในส่วนของ Layer 4 จะทำ load balancing ผ่าน IP address และ port
