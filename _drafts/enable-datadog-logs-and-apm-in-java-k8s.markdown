@@ -14,9 +14,8 @@ tags: [datadog]
 - Datadog subscription พร้อมกับ API key และ Application key
 - Kubernetes ที่ provision ไว้แล้ว
 - [Helm](https://helm.sh/)
-- CICD pipeline (ในตัวอย่างจะใช้เป็น Azure DevOps จะใช้เป็นตัวอื่นหรือจะทำแบบ manual แล้วแต่สะดวกครับ)
 
-**คำเตือน** บทความนี้จะไม่ลงพื้นฐาน Helm หรือ Datadog นะครับ เพื่อความกระชับ
+**คำเตือน** บทความนี้จะไม่ลงพื้นฐาน Docker Helm หรือ Datadog นะครับ เพื่อความกระชับ
 
 ## 1. ติดตั้ง Datadog Java agent ลงไปใน Docker container ของเรา
 ทำการ download agent มาเพิ่มเข้าไปใน Java class ที่ถูก compile แล้ว ตามแนวคิด [Java Instrumentation API](https://docs.oracle.com/javase/7/docs/api/java/lang/instrument/Instrumentation.html)
@@ -32,7 +31,7 @@ tags: [datadog]
 
 พอเรา start application ขึ้นมา และเข้าไปที่ <http://localhost:8080/actuator/prometheus> ก็จะมี metrics ขึ้นมาละ
 
-![Actuator Prometheus](../assets/2020-10-21-actuator-prometheus.png)
+![Actuator Prometheus](/assets/2020-10-21-actuator-prometheus.png)
 
 ## 3. Configure logs ใน application ให้อยู่ในรูปของ JSON format
 เราจะใช้ `logstash-logback-encoder` ในการ encode logs ในรูป JSON เพื่อให้ Datadog ingest ไปได้ จากนั้นเราก็จะสร้างไฟล์ `logback-spring.xml` ไว้ใน classpath เพื่อ configure หน้าตาของ JSON keys ต่างๆ เช่น `status` `level` `trace_id` เพื่อให้เราสามารถ filter logs ได้ง่ายขึ้นเมื่อค้นหาผ่าน Datadog
@@ -48,7 +47,25 @@ tags: [datadog]
 
 <script src="https://gist.github.com/raksit31667/ca3af4325ac41a9f97310db12680df60.js"></script>
 
+จากนั้นเราก็ build และ push Docker image ขึ้นไปบน Docker registry ผ่านคำสั่ง
+
+```sh
+docker build -t your-docker-image-name /path/to/Dockerfile
+```
+
+```sh
+docker push your-docker-image-name:tag
+```
+
+ตามด้วยการ deploy resource ขึ้น Kubernetes ผ่าน `Helm`
+
+```sh
+helm upgrade --namespace your-namespace --install --values path/to/values.yaml --set image.version=your-image-version --wait --timeout 10m0s --atomic your-helm-chart-name /path/to/helm/directory
+```
+
+![Datadog JVM metrics](/assets/2020-10-21-datadog-jvm-metrics.png)
 
 > References: <https://docs.datadoghq.com/agent/docker/prometheus/?tab=standard>
-
+> 
+> Sample code: <https://github.com/raksit31667/example-spring-order>
 
