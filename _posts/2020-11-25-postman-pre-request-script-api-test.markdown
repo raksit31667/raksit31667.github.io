@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ประยุกต์การใช้งาน Pre-request script ใน Postman สำหรับการทดสอบ API"
+title:  "ประยุกต์การใช้งาน Pre-request Script ใน Postman สำหรับการทดสอบ API"
 date:   2020-11-25
 tags: [postman, testing]
 ---
@@ -11,13 +11,13 @@ tags: [postman, testing]
 
 ![Postman authorization pane](/assets/2020-11-25-postman-authorization-pane.png)
 
-ทีมเราขี้เกียจที่จะ copy access token มาแปะใน placeholder ทุกครั้ง เรากับ QA เลยลองใช้ [pre-request script](https://learning.postman.com/docs/writing-scripts/pre-request-scripts/) ใน Postman เพื่อ automate ขั้นตอนนี้  
+ทีมเราขี้เกียจที่จะ copy access token มาแปะใน placeholder ทุกครั้ง เรากับ QA เลยลองใช้ [Pre-request Script](https://learning.postman.com/docs/writing-scripts/pre-request-scripts/) ใน Postman เพื่อ automate ขั้นตอนนี้  
 
 สร้าง [Environment ใน Postman](https://learning.postman.com/docs/sending-requests/managing-environments/) แล้วเพิ่ม variable สำหรับการขอ access token ลงไป ตัวอย่างเช่น
 
 ![Postman authorization pane](/assets/2020-11-25-postman-manage-environments.png)
 
-จากนั้นผมก็จะเพิ่ม pre-request script สำหรับการขอ access token และ set environment variable ชื่อ `access_token` ผ่านการใช้ function ของ **Postman API** จากรูปผมใช้ Microsoft Azure ซึ่ง script จะมาประมาณนี้
+จากนั้นผมก็จะเพิ่ม Pre-request Script สำหรับการขอ access token และ set environment variable ชื่อ `access_token` ผ่านการใช้ function ของ **Postman API** จากรูปผมใช้ Microsoft Azure ซึ่ง script จะมาประมาณนี้
 
 <script src="https://gist.github.com/raksit31667/400a912836d351d61d0a64bcc9d363f8.js"></script>
 
