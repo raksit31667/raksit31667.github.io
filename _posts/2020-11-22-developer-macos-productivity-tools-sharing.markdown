@@ -5,7 +5,7 @@ date:   2020-11-22
 tags: [productivity, iterm2, kubernetes]
 ---
 
-เมื่ออาทิตย์ที่แล้วมีการจัด session ให้กับคนในบริษัทเกี่ยวกับ Productivity tools จากที่เคยแชร์ไปใน [blog](./2020-04-05-intellij-presentation-assistant-plugin.markdown) ก่อนๆ ว่า การฝึกและเรียนรู้เครื่องมือผ่าน program หรือ shortcut ช่วยประหยัดเวลาให้กับเราเยอะมากๆ 
+เมื่ออาทิตย์ที่แล้วมีการจัด session ให้กับคนในบริษัทเกี่ยวกับ Productivity tools จากที่เคยแชร์ไปใน [blog]({% post_url 2020-04-05-intellij-presentation-assistant-plugin %}) ก่อนๆ ว่า การฝึกและเรียนรู้เครื่องมือผ่าน program หรือ shortcut ช่วยประหยัดเวลาให้กับเราเยอะมากๆ 
 
 > เครื่องมือเหล่านี้ไม่จำเป็นจะต้องเป็นของใหม่ๆ เสมอไป ของที่ต้องใช้อยู่ทุกวันเช่น terminal หรือ web browser หรือ text editor หรือ IDE ถ้าฝึกใช้ให้คล่อง ก็มีประโยชน์มากๆ กับเราเช่นเดียวกัน
 

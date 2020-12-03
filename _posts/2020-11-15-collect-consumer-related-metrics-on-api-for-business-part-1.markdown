@@ -79,6 +79,6 @@ http_server_requests_seconds_count{consumer="029a0ed2-bf62-49ff-8e39-1d80f909d9b
 <script src="https://gist.github.com/raksit31667/35eaf9aa287aae79440a2da08ad9fd40.js"></script>
 
 ## Part ต่อไป
-เนื่องจากระบบปัจจุบันใช้ [Datadog](./2020-10-21-enable-datadog-logs-and-apm-in-java-k8s.markdown) เป็น monitoring solution จะมาลองแก้ปัญหาเดียวกันใน Datadog ดูครับ
+เนื่องจากระบบปัจจุบันใช้ [Datadog]({% post_url 2020-10-21-enable-datadog-logs-and-apm-in-java-k8s %}) เป็น monitoring solution จะมาลองแก้ปัญหาเดียวกันใน Datadog ดูครับ
 
 > Sample code: <https://github.com/raksit31667/example-spring-order>

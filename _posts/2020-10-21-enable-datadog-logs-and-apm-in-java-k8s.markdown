@@ -7,7 +7,7 @@ tags: [datadog]
 
 ![Datadog agents](/assets/2020-04-30/2020-04-30-datadog-agents.png)
 
-หลังจากที่ไปทำ product ใหม่แล้วต้องทำระบบ monitoring ผ่าน Datadog เป็นครั้งที่สอง พบว่าบันทึกไปถึงแค่[การติดตั้ง Datadog agent ภายใน cluster เท่านั้น](./../_posts/2020-04-30-deploy-aks-with-datadog-agent-using-terraform.markdown) กลับมาดูอีกทีเลยหาไม่เจอ จึงขอบันทึกการเปิด metrics logging และ tracing ไว้กันลืม
+หลังจากที่ไปทำ product ใหม่แล้วต้องทำระบบ monitoring ผ่าน Datadog เป็นครั้งที่สอง พบว่าบันทึกไปถึงแค่[การติดตั้ง Datadog agent ภายใน cluster เท่านั้น]({% post_url 2020-04-30-deploy-aks-with-datadog-agent-using-terraform %}) กลับมาดูอีกทีเลยหาไม่เจอ จึงขอบันทึกการเปิด metrics logging และ tracing ไว้กันลืม
 
 ### สิ่งที่จะใช้ในบทความนี้
 - Java application (ในตัวอย่างจะใช้ Spring อีกแล้ว ฮ่าๆๆ)
