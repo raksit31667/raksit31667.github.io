@@ -42,4 +42,4 @@ tags: [java, lombok]
 - หมั่นตรวจสอบความซับซ้อนของ code อยู่เสมอ อาจจะใช้ static code analysis มาช่วย หรือผ่าน peer review ก็ได้
 - ระวังการใช้งาน Builder กับ required attributes
 - หลีกเลี่ยงการเพิ่ม business logic ผ่าน Lombok (เช่น custom builder method)
-- จำกัด code style กับการใช้ Lombok (เช่น [field injection vs constructor injection](./2020-05-13-spring-field-injection-drawback.markdown))
+- จำกัด code style กับการใช้ Lombok (เช่น [field injection vs constructor injection]({% post_url 2020-05-13-spring-field-injection-drawback %}))
