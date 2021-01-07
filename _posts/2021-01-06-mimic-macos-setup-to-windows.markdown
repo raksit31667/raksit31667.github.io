@@ -174,8 +174,8 @@ Reading package lists... Done
 N: Updating from such a repository can't be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details.
 ```
-`
-วิธีแก้คือให้ mark **PPA (personal package archive) ซึ่งก็คือ unofficial repositories** ให้ `[trusted=yes]` จะต้องไม่ต้องมียุ่งกับ signature ที่ไป sign ผ่าน **GPG (GNU Privacy Guard) key** เพื่อเอาไปเช็คว่า repository นั้นเป็นของจริงหรือเปล่า โดยให้เราเข้าไปแก้ที่ไฟล์ `/etc/apt/sources.list.d/<your-repository-name>.list` ตามนี้
+
+วิธีแก้คือให้ mark **PPA (personal package archive) ซึ่งก็คือ unofficial repositories** ให้ [trusted=yes] จะต้องไม่ต้องมียุ่งกับ signature ที่ไป sign ผ่าน **GPG (GNU Privacy Guard) key** เพื่อเอาไปเช็คว่า repository นั้นเป็นของจริงหรือเปล่า โดยให้เราเข้าไปแก้ที่ไฟล์ `/etc/apt/sources.list.d/<your-repository-name>.list` ตามนี้
 
 ```text
 deb [trusted=yes] https://packages.cloudfoundry.org/debian stable main
