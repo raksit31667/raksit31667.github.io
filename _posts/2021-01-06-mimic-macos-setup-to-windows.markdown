@@ -8,7 +8,9 @@ tags: [productivity, windows, linux, fish-shell]
 เมื่อปีที่แล้วเขียน blog เกี่ยวกับ [productivity tools ใน macOS ไป]({% post_url 2020-11-22-developer-macos-productivity-tools-sharing %}) ก็เลยคิดว่าถ้าต้องมา code ใน Windows ขึ้นมาหล่ะ (ซึ่งก็เป็นอย่างงั้นจริงๆ ฮ่าๆๆ) ดังนั้นใน blog นี้ก็จะมาบันทึกแนวทางการ setup คร่าวๆ บน Windows ให้คล้ายคลึงกับ macOS มากที่สุด
 
 ## สิ่งที่ต้องมีอย่างแรกคือ Windows Subsystem for Linux (WSL)
-ถ้าจะให้คล้ายกับ macOS ก็ต้องรันคำสั่ง Linux ให้ได้อ่ะนะ ก็สามารถติดตั้งผ่าน Microsoft Store ได้เลย โดยค้นหาด้วยคำว่า "Ubuntu" ก็ได้ หรือจะเข้าผ่าน <https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot%3Aoverviewtab> ก็ได้ (ยกเว้น Windows 10 S mode นะ)
+ถ้าจะให้คล้ายกับ macOS ก็ต้องรันคำสั่ง Linux ให้ได้อ่ะนะ ก็สามารถติดตั้ง [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) และ Linux distribution ที่ชอบผ่าน Microsoft Store ได้เลย อาจจะเลือกเป็น "Ubuntu" ก็ได้ หรือจะเข้าผ่าน <https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot%3Aoverviewtab> ก็ได้ (ยกเว้น Windows 10 S mode นะ)
+
+> ปล. บทความนี้ใช้ได้กับ WSL version 1 เท่านั้นนะครับ เนื่องจาก version 2 เปลี่ยน architecture เป็น Managed VM ไปเลย ดังนั้นการ configure proxy จะไม่สามารถทำผ่าน VPN ของบริษัทได้นะครับ (ดูรายละเอียดเพิ่มได้ตามนี้ <https://docs.microsoft.com/en-us/windows/wsl/compare-versions>)
 
 ## ต่อมาคือการ configure proxy (ถ้ามี)
 บางคนทำงานในบริษัท จะ connect อะไรก็ต้องผ่าน proxy server ถ้าไม่ผ่านก็ไม่สามารถลง dependencies หรือ plugins ที่เราต้องการได้ วีธีการ set proxy ก็รันคำสั่งนี้ได้เลย
@@ -60,7 +62,7 @@ tags: [productivity, windows, linux, fish-shell]
 ต่อไปทำการติดตั้ง `oh-my-fish`
 
 ```shell
-➜  ~ curl -L https://get.oh-my.fish | fish
+➜  ~ curl -k -L https://get.oh-my.fish | fish
 ```
 
 จากนั้นลองรันคำสั่ง `omf`
