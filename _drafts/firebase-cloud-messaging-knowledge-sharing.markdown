@@ -2,7 +2,7 @@
 layout: post
 title:  "บันทึกการแบ่งปันเรื่อง Firebase Cloud Messaging ในบริษัท"
 date:   2021-02-16
-tags: [firebase, javascript, webpush, progressive-web-app]
+tags: [firebase, javascript, web-push, progressive-web-application]
 ---
 
 เมื่อวันก่อนผมได้มีโอกาสแบ่งปันความรู้ให้กับเพื่อนร่วมทีมซึ่งจัดทุกๆ 2 อาทิตย์ โดยหัวข้อครั้งนี้คือ Firebase Cloud Messaging เนื่องจาก product ที่ดูแลอยู่นั้นใช้งานอยู่ ประกอบกับมีงานแก้ไขส่วน notification เข้ามาพอดี แต่ตอนทำอยู่เกิดติดปัญหาเป็น blocker ไม่สามารถทำต่อได้ เลยขอแบ่งปันความเจ็บปวดนี้เลยละกัน
