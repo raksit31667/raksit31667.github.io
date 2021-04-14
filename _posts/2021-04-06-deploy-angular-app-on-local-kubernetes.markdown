@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Deploy Angular application บน Local Kubernetes โดยใช้ Helm"
+title:  "Deploy Angular application บน Local Kubernetes"
 date:   2021-04-06
-tags: [angular, kubernetes, kind, cicd]
+tags: [angular, kubernetes, cicd]
 ---
 
 ช่วงนี้มีงานยกเครื่อง path to production ใหม่บนระบบหน้าบ้านที่พัฒนาบน Angular 10 เนื่องจากปัญหาที่เจอบนระบบปัจจุบันไม่ตอบโจทย์การส่งมอบ product  
