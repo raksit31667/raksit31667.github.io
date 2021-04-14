@@ -34,7 +34,7 @@ tags: [angular, kubernetes, cicd]
 เครื่องมือที่ใช้คร่าวๆ มีประมาณนี้
 - GitHub Actions เป็น CI ของเรา
 - Docker ไว้ build และ run application บน container ละก็ใช้ Docker Hub registry เพื่อ host image
-- Kind สำหรับสร้าง Kubernetes cluster บน local ผ่าน Docker daemon ของเราเอง
+- Kind สำหรับสร้าง Kubernetes cluster บน local machine
 - Helm เป็น package manager ช่วยให้การ deploy Kubernetes resource ง่ายขึ้น
 
 flow ใหม่คร่าวๆ ของเราคือ
@@ -64,7 +64,6 @@ ng build --configuration=<your-build-target-or-environment>
 
 <script src="https://gist.github.com/raksit31667/d4e1296098277ce818e31733968eac2d.js"></script>
 
-
 ### Configuration
 - Load configuration file ผ่าน static JSON file แทน แล้วใครจะใช้ configuration ก็ให้ inject เข้ามาเป็น dependency แทน
 
@@ -83,6 +82,21 @@ ng build --configuration=<your-build-target-or-environment>
 - ตอนเรา deploy ก็ mount ConfigMap เข้าไปใน directory ที่ configuration file อยู่
 
 <script src="https://gist.github.com/raksit31667/2cb2773d67d36863460fcc86142dd08e.js"></script>
+
+### Local Kubernetes
+เนื่องจากไม่มี public Kubernetes cluster เป็นของตัวเอง รุ่นพี่แนะนำ [kind](https://kind.sigs.k8s.io/) ซึ่งเป็น tool ที่ใช้ในการ run Kubernetes cluster บน local ผ่าน Docker ของเราเอง โดยเริ่มติดตั้งตาม [Installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)  
+
+เป้าหมายคือต้องการจะ expose application ผ่าน Kubernetes service ออกไปข้างนอก เพื่อให้เราสามารถเข้าไปดูผลลัพธ์ได้ผ่าน `localhost` ดังนั้นตอน create local cluster จำเป็นต้อง [map port เพิ่ม](https://kind.sigs.k8s.io/docs/user/quick-start/#mapping-ports-to-the-host-machine)
+
+<script src="https://gist.github.com/raksit31667/2aede51c91faa735487dc83f0b0b0d8a.js"></script>
+
+```shell
+kind create cluster --config <path-to-kind-configuration-file.yaml>
+```
+
+ปิดท้ายด้วยการ configure Kubernetes service ให้เป็น type `NodePort` และ expose port ที่เรา map เพิ่มใน `kind` เข้าไป (ในตัวอย่างเป็น port 30000) จากนั้นเข้าไปที่ `http://localhost:30000` ก็จะเห็น app เราละ
+
+<script src="https://gist.github.com/raksit31667/472c18f2fed32b4209e632819913396f.js"></script>
 
 > ไปดูตัวอย่างโค้ด [https://github.com/raksit31667/example-angular-order](https://github.com/raksit31667/example-angular-order)
 
