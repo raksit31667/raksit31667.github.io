@@ -33,7 +33,7 @@ tags: [infrastructure-as-a-code, terraform]
 - เนื่องจากบริษัทใช้ AWS ดังนั้นโจทย์ที่ใช้ก็นำมาจาก [AWS tutorials](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-3/) เหมือนกัน ซึ่งมี instruction ครบ เพียงแต่เราจะมาทำผ่าน Terraform เพื่อให้คนเรียนเห็นภาพการใช้งานแบบเปรียบเทียบกันได้เลย
 - ใช้ AWS account ของตัวเองเพื่อคุม permission และ cost ที่ต้องการได้ เพราะบริษัทเค้ามี policy อ่ะนะ
 - ก่อนเริ่ม session สร้าง AWS user และ replicate role ที่มี policy พอที่จะ provision resource ได้ จากนั้นส่ง access key ให้แต่ละคนไป configure
-- ไม่ได้แนะนำ [AWS security best practices]({% post_url 2020-08-09-introduction-to-version-control-sharing %}) ไปเพราะจัดได้อีก session นึง แต่ย้ำกับคนเรียนไปแล้วระดับนึง
+- ไม่ได้แนะนำ [AWS security best practices]({% post_url 2021-05-07-secure-aws-credentials-local-machine %}) ไปเพราะจัดได้อีก session นึง แต่ย้ำกับคนเรียนไปแล้วระดับนึง
 - หลีกเลี่ยง built-in function ที่มี breaking change ใน version ใหม่ๆ เช่น `list`
 
 ## การปรับปรุงจาก session ครั้งก่อน
