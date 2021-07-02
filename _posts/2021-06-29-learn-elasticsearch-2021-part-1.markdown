@@ -38,6 +38,8 @@ Elasticsearch เป็น Open Source, Document-based, Distributed Search Engin
 | Table    | Type          |
 | Row      | Document      |
 | Column   | Field         |
+| Schema   | Mapping       |
+| SQL      | Query DSL     |
 
 Inverted index มาจาก [Apache Lucene](https://lucene.apache.org/index.html) ซึ่งมีไว้สำหรับทำ full-text search เวลา Elasticsearch ได้รับ document มา เช่น
 
