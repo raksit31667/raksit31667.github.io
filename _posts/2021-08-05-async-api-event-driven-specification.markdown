@@ -24,7 +24,7 @@ tags: [asyncapi, specification, event-driven-architecture]
 
 **Design first**: เป็นแนวคิดใหม่ที่ตรงข้ามกับ code first ก็คือเราสร้าง documentation (contract) ขึ้นมาตาม business requirement จากนั้นระบบจะทำการสร้าง code จาก documentation นั้น โดยเราสามารถเขียน code เองหรือจะให้ระบบทำการสร้างให้อัตโนมัติก็ได้ เหมาะสำหรับระบบที่เน้นค่อยๆ เติบโตทีละเล็กๆ ซึ่งจะต้องใช้เวลาส่วนใหญ่ในการ design ให้เหมาะสมกับการใช้งานที่หลากหลายจาก user หรือทีมอื่นๆ ซึ่งแนวคิดจะสำเร็จได้ต้องมี documentation และ specification ที่ดีตามที่กล่าวไว้ข้างบน
 
-> AsyncAPI สนับสนุนทั้งแนวคิด code-first และ design-first มี[เครื่องมือ](https://www.asyncapi.com/docs/community/tooling)ให้เลือกใช้ทั้งการพัฒนาและการทดสอบ
+> AsyncAPI สนับสนุนทั้งแนวคิด code-first และ design-first มี[เครื่องมือให้เลือกใช้ทั้งการพัฒนาและการทดสอบ](https://www.asyncapi.com/docs/community/tooling)
 
 ![Code first vs Design first](/assets/2021-08-12-code-first-vs-design-first.jpeg)
 
@@ -43,8 +43,8 @@ tags: [asyncapi, specification, event-driven-architecture]
   - **Kafka**: สำหรับ event streaming
   - **WebSocket**: สำหรับ web browser
   - **HTTP**: สำหรับ HTTP streaming API
-- **Channels**: ข้อมูลของ command และ event ที่มีในระบบ ซึ่งเราสามารถ refer ข้อมูล payload จาก **Components** มาได้
 - **Components**: ข้อมูล payload ทั้ง strucuture และ data type
+- **Channels**: ข้อมูลของ command และ event ที่มีในระบบ ซึ่งเราสามารถ refer ข้อมูล payload จาก **Components** มาได้
 
 code ของ contract ระบบเราจะเป็นประมาณนี้
 
@@ -68,7 +68,7 @@ $ npm i -g @asyncapi/generator
 ในตัวอย่างนี้เราเลือกเป็น Java run คำสั่งผ่าน command-line
 
 ```shell
-$ ag <your-contract-url-or-filename> @asyncapi/java-spring-template @asyncapi/html-template -o <your-output-directory>
+$ ag <your-contract-url-or-filename> @asyncapi/java-spring-template -o <your-output-directory>
 ```
 
 เราก็จะได้ code ตัวอย่างมาประมาณนี้
