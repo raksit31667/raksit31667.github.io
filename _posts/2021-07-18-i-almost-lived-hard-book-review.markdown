@@ -2,7 +2,7 @@
 layout: post
 title:  "สรุปจากการอ่านหนังสือ นี่เราใช้ชีวิตยากเกินไปหรือเปล่านะ"
 date:   2021-07-18
-tags: [่book]
+tags: [book]
 ---
 
 ![นี่เราใช้ชีวิตยากเกินไปหรือเปล่านะ](https://readery.co/media/catalog/product/cache/1/small_image/360x/17f82f742ffe127f42dca9de82fb58b1/9/7/9786161840082.png)

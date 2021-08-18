@@ -2,7 +2,7 @@
 layout: post
 title:  "สรุป Libraries และ APIs ของภาษา Java ฉบับสิ้นคิดประจำปี 2021"
 date:   2021-07-17
-tags: [่java, library]
+tags: [java, library]
 ---
 
 ปฏิเสธไม่ได้ว่าภาษา [Java ยังคงได้รับความนิยมอยู่ในปี 2021](https://www.tiobe.com/tiobe-index/) เนื่องจากภาษาเริ่มพัฒนามาตั้งแต่ปี 1995 ทำให้มี ecosystem ที่แข็งแกร่งมาก มี documentation ที่ครบถ้วน มี community ที่ใหญ่มาก มี libraries, frameworks, และ APIs ให้เลือกใช้ครบ สามารถใช้พัฒนาระบบแบบสากกะเบือยันเรือรบ  
