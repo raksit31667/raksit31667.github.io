@@ -45,7 +45,7 @@ tags: [architecture]
 
 ![Conway's Law](/assets/2021-08-20-conway-law.jpeg)
 
-ทีนี้มันมีกฎที่ชื่อว่า [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law) อยู่ซึ่งกล่าวถึงรูปแบบของ architecture สะท้อนให้เห็นถึงรูปแบบขององค์กรที่ทำอยู่ สรุปคือ การที่ architecture มันจะเป็นรูปเป็นร่างได้มันก็ต้องมาจากรูปแบบขององค์กรที่ตอบโจทย์ด้วย
+ทีนี้มันมีกฎที่ชื่อว่า [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law) อยู่ซึ่งกล่าวถึงรูปแบบของ architecture สะท้อนให้เห็นถึงรูปแบบขององค์กรที่ทำอยู่ ซึ่งถ้าเรามองในมุมกลับกัน การที่ architecture มันจะเป็นรูปเป็นร่างได้มันก็ต้องมาจากรูปแบบขององค์กรที่ตอบโจทย์ด้วย
 
 ## Software architect คือใคร ทำอะไรบ้าง
 
@@ -125,43 +125,53 @@ Design ของเรามันควรจะจับต้องได้ 
 #### Architecture decision record
 แทนที่จะเขียน solution architecture เป็นร้อยๆ หน้า ที่มีโอกาสสูงที่จะไม่ update เขียนเป็น decision log เก็บไว้ใน source code น่าจะดีกว่า technique นี้ผมอธิบายไว้[ในบทความว่าด้วยเรื่องของ Evolutionary architecture กับทีม development แล้วครับ]({% post_url 2020-02-02-capturing-evolutionary-architecture-using-adr %})
 
-## Design mindset
+## แล้วตอน Design ควรจะต้องทำอะไรบ้าง
 
 ![Design mindset summary](/assets/2021-08-20-design-mindset-summary.png)
 
 ### Understand
-- Business goals and quality attributes
-- Trade-off slider
-- CFR requirements gathering
+จุดเริ่มต้นเราต้องเข้าใจ **business goals และ quality attributes** ก่อน ถ้าเราไม่เข้าใจหรือเข้าใจผิด มันก็มีโอกาสสูงที่จะ design ผิดไปด้วย โดยเราสามารถใช้ technique เข้ามาช่วยได้เช่น
+
+- [Trade-off slider](https://www.oreilly.com/library/view/agile-experience-design/9780132869249/part03lev1sec30.html)
+- Cross-functional requirements gathering
+
+![Trade-off sliders](/assets/2021-08-20-trade-off-sliders.jpeg)
 
 ### Explore
-- Patterns, tech, and solutions
-- It promotes business goals and quality attributes
-- Event storming
-- Round robin design
+ทำการค้นหาและออกแบบโดยใช้ patterns ที่เคยมี หรือจะออกแบบใหม่หมดเลยก็ได้ ซึ่ง design ที่ได้ควรจะตอบโจทย์ business goals และ quality attributes โดยเราสามารถทำผ่านกิจกรรมต่างๆ เช่น
+
+- [Event storming](https://en.wikipedia.org/wiki/Event_storming)
+- Round-robin design
 
 ### Make
-- Prototypes and models
-- concretely realize Patterns, tech, and solutions
-- Demonstrate business goals and quality attributes
-- ADR, spike, sequence diagram
+สร้าง solution จากการ explore ที่สามารถใช้งานได้จริง ผลงานที่ได้ก็จะสะท้อนความเข้าใจของเรา โดยเราสามารถเริ่มจาก
+- Prototyping
+- Architecture decision record
+- Spike หรือการทดลองภายในกรอบเวลาสั้นๆ
 
 ### Evaluate
-- Code review, architecture briefing
+หลังจากสร้างผลงานขึ้นมาแล้ว ก็ปิดท้ายด้วยการวัดผล ซึ่งสามารถทำได้ผ่าน
+- Code review !!
+- Scenario walkthrough
 
 ## ใครและเมื่อไรที่จะต้องตัดสินใจเรื่อง architecture
+เราสามารถใช้หลักการ **RACI** ซึ่งประกอบไปด้วย
 
-### RACI
-- **R** esponsible -> who perform -> developer
-- **A** ccountable -> who make decision -> architect
-- **C** onsulted -> who has info -> architect
-- **I** nformed -> who needs update
+- **R** esponsible: ใครเป็นคนลงมือทำ
+- **A** ccountable: ใครเป็นคนตัดสินใจ
+- **C** onsulted: ใครมีข้อมูลพอที่สามารถช่วยเหลือคนอื่นได้
+- **I** nformed: ใครต้องการ update
 
-Architect
-- Quality attributes, risk, inertia -> architectual guardrail (manual fitness functions) or sensible defaults (FAQ)
+สังเกตว่า ในขณะที่ทีมพัฒนาอยู่ตรง **R** software architect จะอยู่ตรง **A กับ C** เนื่องจากส่วนใหญ่แล้ว architect จะอยู่ในระดับสูงและดูแลหลายๆ ทีม ดังนั้นเขาจะมีข้อมูลและมุมมองกว้างกว่าที่จะตัดสินใจเรื่อง quality attributes จัดการความเสี่ยง และสามารถชะลอการตัดสินใจไปได้ 
 
-## Time investment
-Development time + architect and risk reduction time + rework time (fixing defects, rewrites, mistakes)
+### แล้วถ้าทีมพัฒนาไม่ทำตาม architect ล่ะ
+เพราะบางครั้งทีมพัฒนาเค้าก็อาจจะมีมุมมองที่คิดว่า solution ของเค้าดีกว่า ดังนั้นแทนที่จะไล่ออกไปซะ (?) จะดีกว่าไหมถ้าเราบันทึกการตัดสินใจเหล่านั้นไว้เพื่อแสดงให้เห็นมุมมองที่เท่ากัน แล้วมาคุยกันว่ามันมีเหตุผลอะไรถึงทำต่างจากนั้นไป โดย architect สามารถใช้เครื่องมือเหล่านี้ในการบันทึกได้
+
+- [Architectual guardrail (manual fitness functions)](https://www.thoughtworks.com/radar/techniques/architectural-fitness-function) การใช้ชุดการทดสอบในการตรวจสอบ architecture ของเรา
+- **Sensible defaults** เป็นเหมือน FAQ สำหรับ engineering practices ที่เป็นเหมือนมาตรฐานที่ใช้กันในองค์กร เช่น ถ้าจะเริ่มทำ [CI](https://www.thoughtworks.com/continuous-integration) จะต้องใช้อะไร เพราะอะไร เป็นต้น
+
+### Time investment
+> Development time + architect and risk reduction time + rework time (fixing defects, rewrites, mistakes)
 
 ![Time investment](/assets/2021-08-20-time-investment.png)
 
@@ -177,6 +187,6 @@ Development time + architect and risk reduction time + rework time (fixing defec
 - **ถ้าแบ่งไม่ได้ เราสามารถใช้เวลาเพิ่มในการคิด architecture ได้ไหม** ถ้าไม่ได้ต้องหาแผนสองละ เช่น หลังจาก release ไป 2 เดือน เรากลับมาแก้หรือดูกันใหม่ดีกว่า
 - **ถ้าขอเวลาเพิ่มได้ งั้นเราชะลอการตัดสินใจได้ไหม** ถ้าได้ก็ทำ analysis เพิ่ม แต่ถ้าไม่ได้ก็หาแผนสองเหอะ
 
-## Architectural patterns
+## ปิดท้ายด้วย Video จาก course นี้ครับ
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uHy-2z80aBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
