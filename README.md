@@ -4,6 +4,10 @@ This is my portfolio, sharings, and notes specially for software development.
 ## Minimum requirements
 - **Ruby**: v2.7.3
 
+```shell
+$ brew install ruby rbenv
+```
+
 or simply follow GitHub Pages [dependency versions](https://pages.github.com/versions/)
 
 ## Installation
