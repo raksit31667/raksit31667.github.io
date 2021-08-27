@@ -19,4 +19,6 @@ blog นี้จะมาแบ่งปัน [Clipy](https://clipy-app.com/) 
 
 ![Clipy preferences](/assets/2021-06-21-clipy-preferences.png)
 
+ปล. app นี้มันไม่รองรับการ mark text ว่าเป็น secret นะครับ ดังนั้นถ้าเรา copy พวก password หรือ API key มันก็จะขึ้นใน UI เลย ดังนั้นระวังการใช้งานกันหน่อยนะครับ
+
 > สามารถ download ได้ผ่าน <https://clipy-app.com/> มาลองใช้กันดูครับ
