@@ -29,7 +29,6 @@ export BAR=bar
 
 ### การใช้งานใน local directory
 1. ใน project directory สร้าง file `.envrc` ขึ้นมา ข้างในก็ระบุ environment variables ที่เราต้องการ
-
 <script src="https://gist.github.com/raksit31667/38c1cb622cedf8314554921bf4d6941a.js"></script>
 
 2. Ignore `.envrc` ออกจาก version control อย่างใน Git ก็เพิ่ม `.envrc` ลงไปใน `.gitignore` ซะ
@@ -49,7 +48,7 @@ $ echo $BAR
 bar
 ```
 
-4. แนะนำให้สร้าง file `.envrc.template` ขึ้นมาซึ่งข้างในจะคล้ายกับ `.envrc` แต่ให้เอา credentials ออก จากนั้นเอาขึ้น version control เวลาที่เพื่อนร่วมทีมจะใช้ `direnv` ก็ copy template file แล้วเปลี่ยนชื่อเป็น `.envrc` จากนั้นก็ใส่ credentials ที่ถูกต้องลงไป
+แนะนำให้สร้าง file `.envrc.template` ขึ้นมาซึ่งข้างในจะคล้ายกับ `.envrc` แต่ให้เอา credentials ออก จากนั้นเอาขึ้น version control เวลาที่เพื่อนร่วมทีมจะใช้ `direnv` ก็ copy template file แล้วเปลี่ยนชื่อเป็น `.envrc` จากนั้นก็ใส่ credentials ที่ถูกต้องลงไป
 
 > ลองนำไปใช้กันดูครับ ของโคตรดี
 
