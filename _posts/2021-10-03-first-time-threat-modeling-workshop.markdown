@@ -89,5 +89,7 @@ Threat modeling เป็นแนวคิดในการทำความ�
 
 > เป็น workshop ที่ทำให้เราตระหนักถึง security ได้ดีเลยว่ามันเป็นเรื่องของทุกคนที่เกี่ยวข้องจริงๆ แล้วทุกวันนี้เราจัดการเรื่อง security ในระบบของเราอย่างไรเอ่ย
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8Rf_x6GNNiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## References
 - [Threat modeling toolkit by Thoughtworks](https://thoughtworksinc.github.io/sensible-security-conversations/materials/Sensible_Agile_Threat_Modelling_Cards.pdf)
