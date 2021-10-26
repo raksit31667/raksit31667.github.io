@@ -5,7 +5,7 @@ date:   2021-10-25
 tags: [java, spring, aws, kinesis]
 ---
 
-ในระบบงานปัจจุบันมีการเชื่อมต่อกับ Amazon Kinesis ซึ่งมันคือ event streaming platform (ใครนึกภาพไม่ออกมันคือพวกเดียวกับ [Apache Kafka](https://medium.com/linedevth/apache-kafka-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99-1-hello-apache-kafka-242788d4f3c6) อ่ะครับ) โดย feature ที่เราใช้คือ data stream ไปทำการ read/write ข้อมูล นอกจากนั้นยังมี feature อื่นๆ เช่น Firehose (stream ข้อมูลไปหา Amazon S3 หรือ Amazon OpenSearch Service เพื่อทำ analytics) หรือ Video streaming  
+ในระบบงานปัจจุบันมีการเชื่อมต่อกับ [Amazon Kinesis](https://aws.amazon.com/kinesis/) ซึ่งมันคือ event streaming platform (ใครนึกภาพไม่ออกมันเป็นพวกเดียวกับ [Apache Kafka](https://medium.com/linedevth/apache-kafka-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99-1-hello-apache-kafka-242788d4f3c6) อ่ะครับ) โดย feature ที่เราใช้คือ data stream ไปทำการ read/write ข้อมูล นอกจากนั้นยังมี feature อื่นๆ เช่น [Firehose](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html) (stream ข้อมูลไปหา Amazon S3 หรือ Amazon OpenSearch Service เพื่อทำ analytics) หรือ Video streaming  
 
 บทความนี้จะมาแบ่งปันตัวอย่างแบบ update ล่าสุดปี 2021 ว่าเราจะเชื่อมต่อกับ Kinesis บน Spring application ได้อย่างไร รวมถึงหลักการเบื้องหลังของ library ที่เราใช้ด้วย
 
@@ -15,7 +15,7 @@ Library ที่เราจะใช้คือ [spring-cloud-stream-binder-k
 ![Amazon Kinesis architecture](/assets/2021-10-26-amazon-kinesis-architecture.png)
 <https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html>
 
-ใน data stream จะประกอบไปด้วยหลายๆ `shard` ซึ่งมันเอาไว้ระบุลำดับของข้อมูลซึ่ง read จะได้ 5 transactions/second หรือ 2 MB/second ส่วน write จะได้ 1000 transactions/second ซึ่ง shard มันประกอบไปด้วย `partitionKey` ซึ่งใช้ตอน group shard เข้าด้วยการเวลาเรา write data ลงไปจะต้องใช้คู่กับ `sequenceNumber` ซึ่งจะถูก assign ด้วย Kinesis เอง การที่เราจะ read/write เราสามารถใช้ Kinesis Producer และ Client library (KPL/KCL) ได้ ซึ่งเป็นส่วนนึงของ `spring-cloud-stream-binder-kinesis` ด้วย  
+ใน data stream จะประกอบไปด้วยหลายๆ `shard` เอาไว้ระบุลำดับของข้อมูลโดย read จะได้ 5 transactions/sec หรือ 2 MB/sec ส่วน write จะได้ 1000 transactions/sec ซึ่ง `shard` มันประกอบไปด้วย `partitionKey` ซึ่งใช้ตอน group `shard` เข้าด้วยการเวลาเรา write data ลงไปจะต้องใช้คู่กับ `sequenceNumber` ซึ่งจะถูก assign ด้วย Kinesis เอง  
 
 สิ่งที่ต่างจาก Apache Kafka คือ Amazon Kinesis จะไม่มีแนวคิดเรื่อง consumer group สิ่งที่ library นี้ทำคือจะเก็บ metadata และ lock ไว้ใน DynamoDB แยกกัน 2 table ซึ่งทำ logic ให้ consumer ตัวเดียวใน group เดียวกันทำการอ่าน message จาก shard นั้นๆ นอกจากนั้น library ยังสามารถ configure ให้กระจาย message ออกไปให้ consume group แบบเท่าๆ กันได้ด้วย  
 
@@ -64,8 +64,8 @@ Library ที่เราจะใช้คือ [spring-cloud-stream-binder-k
 
 สำหรับการตั้งชื่อ binding จะมี format คือ
 
-- output - <functionName> + -out- + <index> สำหรับ producer
-- input - <functionName> + -in- + <index> สำหรับ consumer
+- `<your-producer-component-name>-out-<index>` สำหรับ producer
+- `<your-consumer-component-name>-in-<index>` สำหรับ consumer
 
 โดยที่ `index` คือลำดับของการ binding [ในกรณีที่มีหลาย input ต่อหลาย output](https://cloud.spring.io/spring-cloud-stream/reference/html/spring-cloud-stream.html#_functions_with_multiple_input_and_output_arguments) สำหรับ case ปกติ ก็จะเป็น `index` ก็จะเป็น `0`  
 
