@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "เปรียบเทียบการเขียนชุดการทดสอบแบบ Classicist vs Mockist"
-date:   2022-02-16
+date:   2022-02-17
 tags: [testing, unit-testing, test-driven-development]
 ---
 
