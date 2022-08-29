@@ -22,7 +22,7 @@ tags: [conference]
 
 > Architecture is a bunch of definitions and relationship
 
-ดังนั้นสิ่งที่ทีมควรจะต้องตกลงร่วมกันคือขอบเขตของการทดสอบ (definition) นั่นเอง ซึ่งจะต้องชัดเจนและกระชับเจาะจง เช่น
+ดังนั้นสิ่งที่ทีมควรจะต้องตกลงร่วมกันคือขอบเขตของการทดสอบ (definition) นั่นเอง ซึ่งจะต้องชัดเจนและกระชับเฉพาะเจาะจง เช่น
 
  - เราจะทดสอบใน Repository ซึ่งหมายถึง code ส่วนที่ดึงข้อมูลจาก database ✅
  - เราจะทดสอบใน Utils ซึ่งหมายถึง code ที่ใช้งานทั่ว ๆ ไปใน application ❌
@@ -49,66 +49,86 @@ tags: [conference]
 
 ## Developer Experience (DX) from Code to Platform
 
+ผู้พูดยกตัวอย่างเหตุการณ์ที่ developer หลาย ๆ คนประสบพบเจอในทุก ๆ วัน จากเรื่องไม่ปกติเป็นเรื่องปกติกันไปซะงั้น ไม่ว่าจะเกี่ยวกับ code หรือไม่เกี่ยวกับ code กันเลย แต่ที่เหมือนกันคือ กระทบต่อความสุขของ developer ขณะทำงานกับ product แน่ ๆ ตัวอย่างเช่น
+
 - Code
-    - Unreadable code
-    - Outdated document
-    - No automation tests
-    - Inconsitent API
-    - Over-engineering
+  - Unreadable code
+  - Outdated document
+  - No automation tests
+  - Inconsitent API
+  - Over-engineering
 
-- Developer experience
-    - No test devices
-    - Context switching, cognitive overload
-    - Poor onboarding
-    - Manual steps in Testing
-    - Blocked by open tickets
-    - Constant crush time
+- Non-code
+  - No test devices
+  - Context switching, cognitive overload
+  - Poor onboarding
+  - Manual steps in Testing
+  - Blocked by open tickets
+  - Constant crush time
 
-- เครื่องมือผุดขึ้นมาเยอะแยะ
-- มีใครรู้ทุกอย่างบ้าง
-- Spotify (too many unknowns, duplication of effort, poor discoverability) -> Backstage
-- Measurement and metrics (developer survey, weekly active users, time, four key metrics)
+ผู้พูดเล่าไปถึงการสร้าง platform เพื่อมาแก้ไขปัญหา developer experience ที่มีร่วมกันข้างต้น พบว่ามีอุปสรรคมากมาย
+  - มีเครื่องมือผุดขึ้นมาให้เลือกใช้สร้าง platform เยอะแยะไปหมด คำถามคือมีใครรู้วิธีใช้เครื่องมือทุกอย่างบ้างไหม
+  - จะต้องประสานงานกับคนที่เกี่ยวข้องกับ networking, observability, security & compliance
+  - Platform จะต้องตอบโจทย์ App team (ต้องการที่จะส่งมอบงานได้ไว เปลี่ยนแปลงได้ง่าย) และ Ops team (มีความปลอดภัย น่าเชื่อถือตาม compliance)
+  - Platform ควรเริ่มจากจุดเล็ก ๆ ก่อน เช่น Checklist -> Tickets -> Collaboration -> Self-service
+  - ทำ platform ออกมา ถ้าไม่ตอบโจทย์ DEV อาจจะมีค่าใช้จ่ายคือ ไม่มีคนใช้ ดังนั้นเราจะต้องมีขั้นตอนการ Discover -> Define -> Deliver
+  - Platform ที่ดีมันจะต้องขายตัวมันเองได้ ไม่ต้องบีบคอ DEV มาใช้ มีการสนับสนุนให้เกิดการสร้าง community เกิดการแลกเปลี่ยน รวมไปถึงการช่วย support การใช้งาน platform
+  - หลุมพรางที่หลายคนพลาด ก็อย่างเช่น platform ไม่มีขอบเขต ทำทุกอย่างได้แต่ใช้ยาก, focus ที่ quality มากจนเกินไป, ไม่มี business value
 
-- Platform
-    - Talk to networking, orchestration, observability, security & compliance
-    - App team (move fast, flexible) vs Ops team (safety, reliable)
-    - Journey: Checklist -> Tickets -> Collaboration -> Self-service
-    - No one uses it? หมายความว่าเราไม่ตอบโจทย์ DEV?
-    - Discover -> Define -> Deliver
-    - ขายตัวมันเองได้ ไม่ต้องบีบคอ DEV มาทำ, สร้าง community เกิดการแลกเปลี่ยน, offer support
-    - Pitfall (ไม่ตอบโจทย์, ไม่มีขอบเขต ทำทุกอย่างได้แต่ใช้ยาก, focus ที่ quality, ไม่มี business value)
+ปิดท้ายด้วย use case การปรับปรุง developer experience ของ Spotify ด้วยเครื่องมือ [Backstage](https://backstage.io/) จากปัญหาที่มีร่วมกัน ได้แก่
+
+- มีงานที่ต้องมาทำซ้ำ ๆ กัน เช่น เอกสารอ้างอิงไปถึง source code คู่การ deployment
+- การค้นหาระบบที่ซับซ้อน เช่น ในองค์กรมีระบบอะไรบ้าง ใครเป็นเจ้าของ ต้องติดต่อใคร
+
+และสิ่งที่สำคัญมากของการปรับปรุง developer experience คือจะต้องวัดผลออกมาได้ ผ่านแนวทางปฏิบัติต่าง ๆ เช่น
+- วัดความพึงพอใจในการใข้งานผ่าน Developer survey
+- วัดจำนวนของ active users รวมถึงเวลาที่ใช้ไปใน platform ภายใน 1 อาทิตย์
+- Four key metrics
 
 ## Beyond Fitting Models: How to Build Successful AI-driven Products
 
+ผู้พูดเริ่มจากการอธิบายถึงการ fitting models หรือการปรับแต่งให้ model ใน machine learning มีความแม่นยำในการทำนายผล โดยมี 3 ขั้นตอน
+
+1. Data preparation + Feature engineering
+2. Model selection + parameter tuning
+3. Model evaluation
+
+ซึ่งเราพบว่างานเหล่านี้เราจะต้องมาทำซ้ำ ๆ จึงเกิดแนวคิดของการนำ automation มาช่วย เกิด technique ที่เรียกว่า [AutoML](https://www.thoughtworks.com/en-th/radar/techniques/automated-machine-learning-automl) คำถามคือ แล้ว data scientist จะทำมาหากินอย่างไรต่อดี  
+
+ถ้าหากเราดู use case ที่เคยเกิดขึ้นอย่าง TayTweet, Tesla autopilot แล้วจะพบว่าจะพึ่งพา AutoML อย่างเดียวไม่พอแน่ ๆ ผู้พูดจึงพาเราไปดูว่าการที่สร้าง AI-driven product ให้สำเร็จได้นั้น จะต้องมี 4 อย่าง ได้แก่
+
+### 1. Right Problem
+Data scientist มีหน้าที่ทำการวิเคราะห์ตั้งแต่ต้นว่า เราอยากจะแก้ปัญหาอะไร ส่งผลอย่างไรต่อ user และ business แล้วการนำ machine learning มาใช้ จะทำให้ percent ในการทำนายถูกมากน้อยขนาดไหน ซึ่งเป็นจุดที่ AutoML ไม่สามารถตอบให้ได้ โดยจุดเริ่มต้นที่ดีของการวิเคราะห์คือ
+
+> เราจำเป็นต้องใช้ machine learning มาแก้ปัญหาไหม
+
+- Use case Gmail (you forgot to attach a file)
+- Use case Kbank มีปุ่มประเภท transaction vs ML มา predict ประเภท transaction
+
+### 2. Right Data
+Data scientist มีหน้าที่เก็บ data ที่จะใช้ในการ train โดยจะต้องเก็บ data ผ่านการพูดคุยกับคน หรือ domain expert เพื่อให้คุณภาพดีที่สุด สาเหตุก็คือการที่เราจัดการ data ให้มีคุณภาพตั้งแต่แรก เพื่อให้ machine learning มันทำนายได้อย่างแม่นยำที่มากกว่าการเปลี่ยน algorithm ตาม data ที่ไม่มีคุณภาพนั่นเอง (แนวคิด [Data-centric AI](https://datacentricai.org/)) โดยมีแนวคิดการพิจารณา อย่างเช่น
+
+- Data มันสอดคล้องกับเหตุการณ์ปัจจุบันหรือไม่  (use case: Google ทำนายการระบาด United States Flu)
+- Data มันมี bias หรือไม่ (use case: dataset ไม่มีคนผิวสี -> gorilla)
+
+นอกจากนั้นงานวิจัยยังพบว่า
+- Data scientist + AutoML > AutoML > Data scientist
+- Explainable AI (use case ตรวจรูปภาพ แล้วบอกว่าเป็นโรคอะไร)
+
+### 3. Right Model
+Data scientist มีหน้าที่นำคน (user) เข้าไปมีส่วนกับ model เพราะ AutoML ไม่สามารถรับรู้ข้อมูลบางอย่างเช่น ข้อมูลวันหยุดของแต่ละประเทศ เพราะสุดท้ายแล้ว สิ่งที่คนคิด กับ สิ่งที่ algorithm มันอาจจะต่างกันก็ได้
+
+- What human thinks vs What algorithm does (e.g. clickbait)
+- Recommendation (top 20 of 2019 vs your daily mixes)
+- Use case (facebook prophet, stitch fix ให้คน finalize เสื้อผ้า)
+
+### 4. Right Decision
+Data scientist มีหน้าที่ตรวจสอบผลลัพธ์ว่า
+
+- มี case ที่เกิด false positive, false negative บ้างไหม เช่น Fraud payment detection (ลูกค้าไม่โดนโกง แต่เดาผิดว่าโดนโกง, ลูกค้าโดนโกงจริง แต่เดาผิดว่าไม่โดนโกง)
+- Use case (adversairal attacks, Lazada ads sex merch)
+
 - Google use case (book flight -> add to calendar, show prompt to reply email)
-- Bad use case (TayTweet, Tesla autopilot)
-- Fitting models
-    1. Data prep + Feature engineering
-    2. Model selection + param tuning
-    3. Model evaluation
-- งาน fitting ทำซ้ำ -> automate เลย (AutoML) -> data scientist ตกงาน?
-- Successful AI-driven products require the right:
-    - Problem
-        - Data scientist figures out what problems to solve, impact to biz
-        - Do we need ML? -> user impact, ML impact (เดาถูกมากน้อยแค่ไหน)
-        - Use case Gmail (you forgot to attach a file)
-        - Use case Kbank มีปุ่มประเภท transaction vs ML มา predict ประเภท transaction
-    - Data
-        - Get out and talk to people
-        - Data scientist + AutoML > AutoML > Data scientist
-        - ข้อมูลที่ใช้ train ไม่ทันสมัยกับเหตุการณ์ปัจจุบัน (use case: Google ทำนายการระบาด United States Flu)
-        - Bias (use case: dataset ไม่มีคนผิวสี -> gorilla)
-        - Data-centric AI เราจัดการ data ให้มันมี quality ก่อน แทนที่จะเปลี่ยน algorithm ตาม dirty data
-        - Explainable API (use case ตรวจรูปภาพ แล้วบอกว่าเป็นโรคอะไร)
-    - Model
-        - What human thinks vs What algorithm does (e.g. clickbait)
-        - Recommendation (top 20 of 2019 vs your daily mixes)
-        - เอาคนเข้าไปอยู่ใน model (capacity, seasonality and holidays)
-        - Use case (facebook prophet, stitch fix ให้คน finalize เสื้อผ้า)
-    - Decision
-        - เผื่อ case ที่เดาผิด (false positive, false negative)
-        - Use case (ลูกค้าไม่โดนโกง แต่เดาผิดว่าโดนโกง, ลูกค้าโดนโกงจริง แต่เดาผิดว่าไม่โดนโกง)
-        - Use case (adversairal attacks, Lazada ads sex merch)
 
 ## Building data platforms "the right way"
 
