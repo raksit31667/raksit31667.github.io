@@ -36,6 +36,8 @@ tags: [database, jpa, java]
 
 โดยเราจะต้อง configure sequence ในส่วนของ increment เพิ่ม ก็จะทำให้ JPA ไปดึง sequence มาแค่ครั้งเดียวต่อจำนวน increment ส่งผลให้ performance จะออกมาดีขึ้น ตัวอย่างเช่น
 
+<script src="https://gist.github.com/raksit31667/04a58737a2fb27517b46a903a4c91bd2.js"></script>
+
 <script src="https://gist.github.com/raksit31667/de8024d4bbaa9c4cba1c21678a2078fe.js"></script>
 
 แต่ถ้าถ้าเราใช้ *SEQUENCE* ดั้งเดิมโดยไม่ configure อะไร (increment = 1) ผลที่ออกมาก็ไม่ได้ต่างจาก *IDENTITY* สักเท่าไร เพราะ JPA ก็ต้องไปดึง ID ใหม่จาก sequence ในทุก ๆ record ที่จะเพิ่มเข้าไปอยู่ดี  
