@@ -1,36 +1,54 @@
 ---
 layout: post
-title:  "ว่าด้วยเรื่องของการป้องกัน Collective brain fog"
+title:  "ว่าด้วยเรื่องของ Collective brain fog"
 date:   2022-12-08
 tags: [soft-skill]
 ---
 
-My brain is overloaded
+ในการทำงานปัจจุบัน เป็นเรื่องปกติที่เราจะต้องเจอกับความเครียดเนื่องจากมันมีหลายอย่างที่จะต้องคิดต้องจำเยอะ ต้องเร่งทำงานให้เสร็จ หรือเกิดจากพักผ่อนน้อย โดยเฉพาะเราที่อยู่ในวงการ IT ที่ต้องทำงานอยู่จอ computer เป็นเวลานาน ในที่สุดก็ทำให้เคมีในสมองเสียสมดุล เริ่มมีความคิดว่าทำไมทุกอย่างมันดูเยอะไปหมดเลย จะเริ่มเขียน code ก็คิดไม่ออกตื้อไปหมด เกิดเป็นอาการ**สมองล้า (brain fog)**  
 
-- Working memory connects Short memory and Long memory
-- Intrinsic cognitive load - basic skill to complete task - Keep it low ⬇️ 
-  - Choose your tasks, upskill, manage learning curve
-  - It's OK when it's high during onboarding time
-- Extraneous cognitive load - distraction from working on the task - Keep it low ⬇️ 
-  - Protect your attention
-  - Remove distraction by setting up focus time
-  - Practice mindfulness
-- Germane cognitive load - What's the task for? Why am I doing this? - Keep it high ⬆️ 
-  - Actively question "WHY"
-  - Regularly step back
-  - Take a break
+แน่นอนว่า brain fog มันไม่ได้เกิดขึ้นทันทีทันใด มันเกิดจากการสะสมมาเป็นระยะเวลานึง (collective) เราจะมีวิธีการป้องกันไม่ให้มันบานปลายได้อย่างไร มาดูกัน  
 
-- This also applies to a team
-  - Intrinsic cognitive load - Keep it low ⬇️ 
-    - Onboarding, nowledge sharing
-    - Introduce new concept gradually
-  - Extraneous cognitive load - Keep it low ⬇️ 
-    - Reasonable team size
-    - Stable team
-    - Clear interaction, agreeement, R&R both internal and dependencies
-    - Psychological safety
-    - Efficient tool
-    - Reduce waste
-  - Germane cognitive load - Keep it high ⬆️ 
-    - Define clear and stimulating problems
-    - Define clear and certain solutions
+## รู้จักกับประเภทของ cognitive load
+Cognitive load คือ ปริมาณของความจำระยะสั้นและระยะยาวที่เก็บไว้ในพื้นที่จำกัด มีหลัก ๆ 3 ประเภทด้วยกัน
+
+### Intrinsic cognitive load
+สิ่งที่ต้องคิดต้องจำจากการใช้ทักษะทำงานให้เสร็จ ยิ่งต้องคิดต้องจำในการทำงานให้เสร็จเท่าไร ก็จะมี cognitive load นี้มากเท่านั้น เราควรจะคุมให้มันน้อย ๆ เข้าไว้ (ในช่วงที่เราเข้า project ใหม่ ๆ cognitive load ในช่วงแรกจะสูงเป็นปกติครับ เดี๋ยวมันจะลดลงไปเรื่อย ๆ เมื่อเราปรับตัวเข้ากับ project ได้เอง)
+
+### Extraneous cognitive load
+สิ่งที่ต้องคิดต้องจำจากสิ่งรบกวนการทำงานให้เสร็จ ยิ่งต้องคิดต้องจำในการทำงานให้เสร็จเท่าไร ก็จะมี cognitive load นี้มากเท่านั้น เราก็ควรจะคุมให้มันน้อย ๆ เข้าไว้
+
+### Germane cognitive load
+สิ่งที่ต้องคิดต้องจำเมื่องานที่ต้องทำให้เสร็จไปเกี่ยวข้องกับประสบการณ์หรือเรื่องในอดีตเคยผ่านมา ยิ่งเราคิดและจำจากประสบการณ์ได้มากเท่าไร ก็จะมี cognitive load นี้มากเท่านั้น เราก็ควรจะคุมให้มันมาก ๆ เข้าไว้  
+
+## วิธีจัดการ cognitive load กับตัวเอง
+
+### Intrinsic cognitive load ⬇️
+- ฝึกทักษะที่เกี่ยวข้องกับงานนั้น ๆ
+- หาคนช่วยที่มีประสบการณ์ตรง หรือ หาตัวอย่างจาก project ที่เคยทำเสร็จไปแล้ว
+
+### Extraneous cognitive load ⬇️
+- มีสมาธิจดจ่อกับงานที่เราทำ ตัดสิ่งรบกวนด้วยการสร้างกรอบเวลาขึ้นมา (มีหลาย technique ที่นิยมเช่น [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique))
+- ฝึกนั่งสมาธิ (ส่วนตัวคิดว่าข้อนี้ยากจัด ฮ่า ๆๆ)
+
+### Germane cognitive load ⬆️ 
+- ถามคำถามเชิง "ทำไม" บ่อย ๆ เพื่อทำความเข้าใจว่าเราทำงานนี้ไปทำไม จะได้มีโอกาสมากขึ้นที่จะเชื่อมเหตุผลใหม่เข้ากับประสบการณ์ของเรา
+
+## วิธีจัดการ cognitive load กับทีม
+
+### Intrinsic cognitive load ⬇️
+- การทำ [onboarding](https://medium.com/nontechcompany/what-have-you-prepared-for-your-new-hires-77d9da04ec96) ที่ดี
+- ค่อย ๆ นำเสนอแนวทางการทำงานใหม่ ๆ ไม่ต้องยัดเข้าไปทีเดียวทั้งหมด
+
+### Extraneous cognitive load ⬇️
+- ควบคุมจำนวนคนในทีมให้เหมาะสม อย่าให้เข้า ๆ ออก ๆ บ่อยเกินไป (บอกเป็นตัวเลขไม่ได้ อันนี้แล้วแต่ว่าทีมทำอะไร)
+- ตกลงแนวทางการทำงาน รวมถึงบทบาทและความรับผิดชอบ (roles & responsibility) ร่วมกัน
+- สร้างพื้นที่ที่เกิดความสบายใจ กล้าลองผิดลองถูก มีความเชื่อใจซึ่งกันและกัน (psychological safety)
+- ทำให้แนวทางการทำงานออกมา [lean](https://www.thoughtworks.com/insights/blog/understanding-how-design-thinking-lean-and-agile-work-together) ที่สุดด้วยการลด[สิ่งที่ไม่จำเป็น](https://www.somkiat.cc/summary-the-seven-wastes-in-software-development/)ออกไป
+- จากกฎ [Conway’s law](https://en.wikipedia.org/wiki/Conway%27s_law) ซึ่งกล่าวถึง architecture รวมถึงแนวทางการส่งมอบงานแบบอัตโนมัติ มันจะเป็นรูปเป็นร่างได้มันก็ต้องมาจากรูปแบบขององค์กรที่ตอบโจทย์ด้วย เมื่อสภาพองค์กรเปลี่ยนไปแล้วเราควรจะสามารถตรวจสอบได้ว่าแนวทางการส่งมอบมันเปลี่ยนตามไปด้วยหรือไม่ เช่น [form](https://docs.google.com/forms/d/e/1FAIpQLSfDjBs3KRdLp524ipvhrOIVeqqhBiR2CFDspvvhfWCphjV7XQ/viewform) ที่ประกอบไปด้วยคำถามต่าง ๆ เช่น ความยากในการทดสอบ การ build deploy และดูแลระบบงาน เป็นต้น
+
+### Germane cognitive load ⬆️ 
+- กำหนดปัญหาให้ชัดเจนและน่าสนใจที่จะลงมือแก้ไข
+- กำหนดวิธีแก้ปัญหาให้ชัดเจนและน่าจะพอไปต่อได้
+
+> จะสังเกตแปลว่าการมี cognitive load ไม่ใช่สิ่งที่แย่ไปหมดด เพียงแต่เราต้องเลือกให้มีถูกประเภทเท่านั้นเอง
