@@ -30,4 +30,4 @@ format ของ token ที่ Replace Tokens task ตั้งมาให้
 
 <script src="https://gist.github.com/raksit31667/cec41fb6c69ddd3a9e0481939164285a.js"></script>
 
-> จากประสบการณ์ในการใช้งานแล้ว พบว่าช่วยแยก concern ระหว่างการ run script กับการจัดการ configuration ออกจากกัน ทำหใ้ให้การดูแล Azure DevOps pipeline code เป็นไปได้ง่ายขึ้น ลองนำไปใช้กันดูครับ
+> จากประสบการณ์ในการใช้งานแล้ว พบว่าช่วยแยก concern ระหว่างการ run script กับการจัดการ configuration ออกจากกัน ทำให้การดูแล Azure DevOps pipeline code เป็นไปได้ง่ายขึ้น ลองนำไปใช้กันดูครับ
