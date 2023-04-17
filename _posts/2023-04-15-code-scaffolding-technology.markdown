@@ -5,6 +5,8 @@ date: 2023-04-15
 tags: [platform, code-scaffolding, tools]
 ---
 
+> This article is also available in [English](https://medium.com/nontechcompany/the-laypersons-guide-to-code-scaffolding-750aa299e904) version.
+
 ในการพัฒนา software ปัจจุบัน นักพัฒนาในหลายองค์กรยังคงค้นคว้าและตามหาวิธีการส่งมอบงานที่มีคุณค่าต่อลูกค้าให้รวดเร็วที่สุดโดยที่ไม่ต้องมาปวดหัวกับการลงมือสร้างชิ้นงานใหม่ขึ้นมาตั้งแต่ต้น ในขณะเดียวองค์กรก็มีโจทย์ยากในการรักษามาตรฐานของ engineering practice ให้ได้ มาดูกันว่าแนวคิดของ code scaffolding (code generation) ที่เกิดขึ้นในช่วงหลายปีที่ผ่านมาจะแก้ปัญหาได้กับกลุ่มคนทั้งคู่ได้อย่างไร แล้วเราจะนำ technology แบบไหนมาใช้กันดี
 
 ## ทำไมถึงต้องมี code scaffolding
