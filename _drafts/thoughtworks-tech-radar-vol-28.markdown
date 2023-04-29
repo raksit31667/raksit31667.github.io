@@ -91,22 +91,22 @@ tags: [technology-radar]
 ## Tools
 
 ### DVC (Adopt)
+[Data Version Control - DVC](https://dvc.org/) เป็นเครื่องมือในการทำ version control สำหรับ data science project มีรูปแบบการทำงานคล้าย ๆ กับ Git ใน code version control เลย แต่สิ่งที่ track จะเป็น machine learning model และ data sets แทน นั่นหมายความว่าเราสามารถ track ย้อนกลับไปดู model เก่า ๆ ได้ แม้กระทั่งแตก branch เพื่อแยกงาน และจะเก็บข้อมูลไว้ใน Amazon S3, Azure Blob Storage, Google Drive, Google Cloud Storage ก็ได้ นับว่าเป็นจุดเริ่มต้นที่จะนำ engineering practice ดี ๆ มาใช้กับงานสาย data science ด้วย
 
-### Apicurio Registry (Trial)
+### Akeyless (Trial)
+ปัญหาของการเชื่อมระบบงานที่อยู่ข้ามหลาย ๆ cloud provider คือการจัดการ credentials และ access control ที่ซับซ้อนเพราะเมื่อมีการ update ก็ต้องทำข้ามทุก provider เครื่องมือ [Akeyless](https://www.akeyless.io/) ใช้แนวคิดในการเก็บ credentials แล้ว sync ข้ามหลาย ๆ provider เอา นอกจากนั้นยังมี user interface และ monitoring ให้ ส่งผลให้การจัดการง่ายขึ้นเนื่องจากเราก็ update credentials แค่ที่เดียวพอ
 
 ### EventCatalog (Trial)
+สิ่งที่ควรทำเมื่อมีการพัฒนาระบบในรูปแบบของ event-driven architecture กับ microservcies คือการกำหนดและทำ documentation ของ event schema ซึ่งท่าส่วนใหญ่ที่ไปกันคือบันทึก[ลงไปใน schema registry](https://learn.microsoft.com/en-us/azure/event-hubs/create-schema-registry) ขึ้นอยู่กับว่าใช้ event streaming เจ้าไหน [EventCatalog](https://www.eventcatalog.dev/) เป็นเครื่องมือใหม่ที่เราสามารถเขียนและจัดเก็บ documentation ที่เกี่ยวกับ events และ schemas สำหรับ event-driven architecture ที่มีมากกว่าแค่ event schema definition เพราะเราสามารถระบุได้เลยว่า service ไหนเป็นคน publish หรือ subscribe event นั้น ๆ ด้วย
 
 ### FOSSA (Trial)
-
-### Gitleaks (Trial)
-
-### Helmfile (Trial)
+[FOSSA](https://fossa.com/product/open-source-license-compliance) เป็นเครื่องมือที่ใช้ตรวจสอบว่า dependencies ที่เป็น open-source นั้นใช้บน license อะไรอยู่ มี automation ที่เชื่อมเข้ากับ CI เพื่อตรวจสอบแบบ real-time ได้ด้วย ช่วยให้เราตรวจสอบความเสี่ยงทางด้าน security ได้รวดเร็วขึ้น 
 
 ### IBM Equal Access Accessibility Checker (Trial)
+[IBM Equal Access Accessibility Checker](https://www.ibm.com/able/toolkit/verify/overview/) เป็นเครื่องมือที่ตรวจสอบ accessibility ของระบบงาน เช่น web application ที่จะมาในรูปแบบ manual หรือ browser extension หรือ screen reader ก็ได้ คำแนะนำคือให้ใช้เครื่องมือนี้เป็นส่วนเสริมในการทดสอบโดยที่ยังไม่ต้องไปลบการทดสอบแบบอัตโนมัติอื่น ๆ ที่เรามีอยู่แล้ว
 
 ### Mozilla SOPS (Trial)
-
-### Ruff (Trial)
+[Mozilla SOPS](https://github.com/mozilla/sops) เป็นเครื่องมือในการ encrypt Kubernetes secret รองรับ YAML, JSON, ENV, INI และ BINARY format สามารถ encrypt ด้วย secret manager ของ cloud provider หลาย ๆ เจ้าอย่าง AWS KMS, GCP KMS, Azure Key Vault เป็นต้น ช่วยให้เราสามารถเก็บ secret ไว้ในรูปแบบ source code ได้ ในขณะเดียวกันมันก็ปลอดภัยในระดับนึงเนื่องจากมันต้องเข้าถึง secret manager ถึงจะ decrypt ได้
 
 ### Steampipe (Trial)
 
@@ -114,31 +114,36 @@ tags: [technology-radar]
 
 ### Terraform Cloud Operator (Trial)
 
+
 ### Typesense (Trial)
+[Typesense](https://github.com/typesense/typesense) เป็น open-source search engine มีจุดเด่นที่เขาโฆษณาคือเร็ว แรง และฉลาดที่จะ search ต่อจาก keyword ที่สะกดผิด (typo-tolerant) เหมาะสำหรับระบบที่ต้องการ search ที่เน้นเร็วมากกว่าจำนวนข้อมูล (แต่จาก [demo กับข้อมูล 30 กว่าล้าน record](https://songs-search.typesense.org/) ก็จัดว่าเร็วแล้ว) ในขณะที่คู่แข่งอย่าง Elasticsearch จะเน้นจำนวนข้อมูลเยอะ ๆ ได้เนื่องจาก scale ได้ดีกว่า
 
 ### ChatGPT (Assess)
+หลายคนคงไม่แปลกใจที่จะได้เห็น [ChatGPT](https://openai.com/blog/chatgpt) ใน Tech Radar ฉบับนี้ เนื่องจากมันเป็น large language model (LLM) ที่ทรงพลังมากและมี use case นับไม่ถ้วนไล่ตั้งแต่ออก idea ไปจนถึงเขียน code และ test ให้ครบ โดยเฉพาะตัวใหม่ล่าสุดที่เพิ่งออกมาอย่าง GPT4 ที่สามารถเชื่อมกับ web search ได้แล้ว แต่สาเหตุที่ ChatGPT ยังอยู่ใน Assess เนื่องจากหลายคนกังวลว่ามันจะเอาข้อมูลของเราไปทำอะไร (data privacy) เนื่องจากเราสามารถใส่ข้อมูลที่อาจจะเป็นความลับขององค์กรเข้าไปส่งผลให้มีโอกาสหลุดออกไปได้ ดังนั้นก่อนที่องค์กรจะนำมาใช้งานในการพัฒนา software แบบจริงจัง Thoughtworks แนะนำให้ปรึกษากับทีมกฎหมายก่อน
 
 ### GitHub Copilot (Assess)
+จากหัวข้อ ChatGPT ข้างบน หากองค์กรมีความกังวลด้าน data privacy เราก็แนะนำให้รอใช้ [GitHub Copilot](https://github.com/features/copilot) ไปก่อนได้ ซึ่งจะต่างจาก ChatGPT ตรงที่มันเป็นเครื่องมือสำหรับช่วยเขียน code เท่านั้น มีจุดเด่นคือสามารถเสนอแนะ code ที่เจาะจงไปตาม context ของ code เราโดยเฉพาะได้ ด้วยข้อจำกัดที่มันทำเพื่อช่วยเขียน code อย่างเดียวเลยอาจจะไม่ได้เพิ่ม productivity มากเท่าไร เนื่องจากการพัฒนา software มันมีอะไรต้องทำมากกว่าเขียน code นั่นเอง 
 
 ### iamlive (Assess)
-
-### Kepler (Assess)
+[iamlive](https://github.com/iann0036/iamlive) เป็นเครื่องมือที่ช่วยทุ่นแรงในการเขียน AWS IAM policy โดยมันจะ track ตามคำสั่งที่เรา run ผ่าน AWS CLI แล้วออกมาเป็น policy ที่จำเป็นต้องใช้ในการ run คำสั่งนั้นให้ผ่าน
 
 ### Kubernetes External Secrets Operator (Assess)
-
-### Kubeshark (Assess)
+[external-secrets](https://github.com/external-secrets/external-secrets) เป็นเครื่องมือที่ใช้เชื่อม Kubernetes กับ secret manager โดยผลลัพธ์คือมันจะสร้าง Kubernetes Secrets resource ขึ้นมาตาม secret ที่เก็บไว้ข้างนอกเลย
 
 
 ## Languages and Frameworks
 
 ### Gradle Kotlin DSL (Adopt)
+ถ้าเราใช้ [Gradle](https://docs.gradle.org/current/userguide/userguide.html) เป็น package manager แล้วเราสามารถเขียนได้ 2 แบบคือ [Groovy และ Kotlin DSL](https://docs.gradle.org/current/userguide/migrating_from_groovy_to_kotlin_dsl.html) ทาง Thoughtworks แนะนำให้เป็นอย่างหลังเนื่องจากมันสามารถใช้ความสามารถของ IDE อย่างการทำ autocompleting หรือ refactoring ได้
 
 ### Stencil (Trial)
+[Stencil](https://stenciljs.com/) เป็น library สำหรับทำ web component ด้วย TypeScript, JSX และ JSDoc ซึ่งสามารถ share ใช้งานร่วมกับ platform ไหนก็ได้จึงเหมาะสำหรับการสร้าง design system เดียวแล้วต้องรองรับ platform หรือ framework หลาย ๆ ตัวเป็นอย่างมาก (หรือจะไม่ใช้ framework อะไรเลยก็ได้เหมือนกัน) นอกจากนั้นยังสามารถทำ polyfilling ในกรณีที่ browser ไม่รองรับด้วย 
 
-### Vitest (Trial)
+### Qwik และ SolidJS (Assess)
+ยังคงมาอย่างต่อเนื่องสำหรับ JavaScript framework ใหม่ ๆ ในฉบับนี้มี 2 ตัวได้แก่
 
-### .NET 7 Native AOT (Trial)
-
-### SolidJS (Assess)
+- [Qwik](https://qwik.builder.io/) แก้ปัญหาในการ load web ครั้งแรกแล้วมันช้าซึ่งเกิดหลังจาก server-side rendering เช่น ผูก event listeners, สร้าง DOM tree, ดึง application state (เรียกรวม ๆ กันว่า hydration)
+- [SolidJS](https://www.solidjs.com/) ช่วยให้เราเขียน React ด้วย performance ที่เร็วขึ้น มี bundle size ที่เล็กลง และรองรับ web component ด้วย
 
 ### Turborepo (Assess)
+ปัญหาของการใช้แนวคิด monorepo คือขนาดของ project ที่ใหญ่และความซับซ้อนในการจัดการ build, package, test และ deploy ดังนั้นถ้าเราสามารถลดเวลาที่ใช้ในขั้นตอนดังกล่าวได้ชีวิตก็จะดีขึ้นไปด้วย การมาของ [Turborepo](https://turbo.build/repo) ที่เป็นตัวจัดการ monorepo สำหรับ JavaScript project เนื่องจากมันถูกพัฒนาด้วยภาษา Rust ดังนั้นมันจึงเร็วมาก ๆ ทำให้เราสามารถ build ได้หลาย project พร้อม ๆ กันเลย หรือจะเลือก run ตามลำดับก็ได้ไม่ว่ากัน น่าจะเป็นตัวเลือกที่น่าสนใจไม่แพ้ nx หรือ Lerna เลยนะ
