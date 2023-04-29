@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "สิ่งที่น่าสนใจจาก Thoughtworks Tech Radar ฉบับที่ 87"
-date:   2022-04-28
+date:   2023-04-28
 tags: [technology-radar]
 ---
 
