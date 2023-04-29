@@ -44,6 +44,7 @@ tags: [technology-radar]
 ปัญหาในการพัฒนา API คือการนำเสนอให้คนเห็นถึง business value เนื่องจากในสายตาคนทั่วไปมันดูเป็นอะไรที่ technical เอามาก ๆ  การนำเครื่องมืออย่าง [Swagger](https://swagger.io/) หรือ [Postman](https://www.postman.com/product/what-is-postman/) มาช่วยก็ช่วยให้มันจับต้องได้มากขึ้น จึงเกิดแนวคิดในการสร้าง frontend application สำหรับนำเสนอ API ขึ้นมาโดยเฉพาะ ซึ่งอาจจะมาในรูปแบบของ UI ที่เป็น form ก็ได้ ก็จะช่วยให้ business user เข้าใจได้มากขึ้นเพราะพวกเค้าคุ้นชินกับมันมากกว่าเครื่องมือที่ว่ามาก่อนหน้า
 
 ### Verifiable credentials (Trial)
+ปัญหาของการเก็บข้อมูล credentials ต่าง ๆ เช่น passport บัตรประชาชน ใบขับขี่ หนังสือทางราชการในปัจจุบันคือมีโอกาสที่จะถูกปลอมแปลง และตอนที่จะใช้มันก็แสดงข้อมูลทั้งหมดออกไปทั้งที่จะใช้แค่บางส่วนเท่านั้น (นึกถึงการเซ็นสำเนาถูกต้องสำหรับการใช้ข้อมูลบัตรประชาชนในประเทศไทย) จึงเกิดความกังวลในด้านความปลอดภัยและความเป็นส่วนตัวตามมา จึงเกิดแนวคิดของ [Verifiable credentials](https://en.wikipedia.org/wiki/Verifiable_credentials) คือเอาคนที่ถือ credentials (holder) เป็นศูนย์กลางแทนที่ระบบที่เก็บ credentials เดิม แล้วเก็บในรูปแบบของ digital wallet แทนโดยที่ไม่ต้องทำเรื่องขอคนที่ออก credentials ให้เรา (issuer) เลย เพราะว่าจะมีคนที่ตรวจสอบ credentials เหล่านั้นอีกที (verifier) ด้วยความที่มันเป็น digital จึงสามารถตรวจสอบด้วย cryptography เพื่อความปลอดภัยได้ หรือใช้ blockchain technology เพื่อป้องกันการแก้ไขข้อมูลโดยไม่ได้รับอนุญาต นอกจากนั้นเรายังสามารถกำหนดได้ว่าจะให้มีข้อมูลแค่บางส่วนที่จะใช้จริง ๆ
 
 ### Logseq as team knowledge base (Assess)
 ทีมมีการจัดการคลังความรู้แตกต่างกันไปตามเครื่องมือ ส่วนมากที่เราเห็นก็จะเป็นในรูปแบบของ Wiki แต่วิธีใหม่ ๆ ยังเป็นส่วนน้อยอยู่ หนึ่งในนั้นก็คือการใช้ application อย่าง [logseq](https://logseq.com/) หรือ [Obsidian](https://www.thoughtworks.com/radar/tools/obsidian) ที่มี graph database ที่เก็บ notes ที่เชื่อมกันผ่าน application ทำให้เราเห็นการเชื่อมโยงของความรู้ต่าง ๆ เกิดการเรียนรู้ขึ้นใหม่ในทีม เป็นประโยชน์มากสำหรับการทำ onboarding ให้คนที่เข้าทีมใหม่ด้วย แต่ไม่ว่าจะใช้เครื่องมืออะไร การจัดเรียงความรู้ให้เป็นระบบระเบียบก็ยังจำเป็นอยู่ดี
@@ -111,9 +112,6 @@ tags: [technology-radar]
 ### Steampipe (Trial)
 
 <https://medium.com/nontechcompany/query-aws-resource-with-sql-using-steampipe-50f5ab4f5d84>
-
-### Terraform Cloud Operator (Trial)
-
 
 ### Typesense (Trial)
 [Typesense](https://github.com/typesense/typesense) เป็น open-source search engine มีจุดเด่นที่เขาโฆษณาคือเร็ว แรง และฉลาดที่จะ search ต่อจาก keyword ที่สะกดผิด (typo-tolerant) เหมาะสำหรับระบบที่ต้องการ search ที่เน้นเร็วมากกว่าจำนวนข้อมูล (แต่จาก [demo กับข้อมูล 30 กว่าล้าน record](https://songs-search.typesense.org/) ก็จัดว่าเร็วแล้ว) ในขณะที่คู่แข่งอย่าง Elasticsearch จะเน้นจำนวนข้อมูลเยอะ ๆ ได้เนื่องจาก scale ได้ดีกว่า
