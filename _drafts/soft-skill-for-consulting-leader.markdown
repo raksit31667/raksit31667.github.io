@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "สรุปสิ่งที่ได้เรียนรู้จากการไปเข้า training เกี่ยวกับ Consulting"
-date:   2023-05-23
+title:  "Soft skill สำหรับผู้นำในทีม consulting"
+date:   2023-05-28
 tags: [consulting, soft-skill]
 ---
 
