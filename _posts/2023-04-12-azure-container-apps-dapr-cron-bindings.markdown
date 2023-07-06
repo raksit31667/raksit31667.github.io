@@ -9,7 +9,7 @@ tags: [azure, azure-container-apps, dapr]
 
 <https://docs.dapr.io/getting-started/quickstarts/bindings-quickstart/>
 
-จาก [blog ที่แล้ว]({% post_url 2020-01-05-interesting-questions-agile %})พูดถึงเรื่องของ [Azure Container Apps (ACA)](https://learn.microsoft.com/en-us/azure/container-apps/overview) หนึ่งในความสามารถที่มีมาให้คือการใช้ Dapr ที่ช่วยลดความซับซ้อนในการพัฒนา feature ต่าง ๆ ตามแนวคิดของ distributed architecture โดยที่หนึ่งในนั้นคือการสร้าง [cron job](https://docs.dapr.io/reference/components-reference/supported-bindings/cron/) มาดูกันว่ามันจะต้องมีขั้นตอนยังไงบ้าง
+จาก [blog ที่แล้ว]({% post_url 2023-03-30-azure-container-apps %})พูดถึงเรื่องของ [Azure Container Apps (ACA)](https://learn.microsoft.com/en-us/azure/container-apps/overview) หนึ่งในความสามารถที่มีมาให้คือการใช้ Dapr ที่ช่วยลดความซับซ้อนในการพัฒนา feature ต่าง ๆ ตามแนวคิดของ distributed architecture โดยที่หนึ่งในนั้นคือการสร้าง [cron job](https://docs.dapr.io/reference/components-reference/supported-bindings/cron/) มาดูกันว่ามันจะต้องมีขั้นตอนยังไงบ้าง
 
 ## ทำความเข้าใจ cron ใน Dapr ก่อน
 โดยปกติแล้ว Dapr container จะถูก deploy ในรูปแบบของ sidecar ไปกับ app container หลัก เราสามารถ configure cron ผ่านการทำ [bindings](https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/) ที่มีชื่อว่า `bindings.cron` ไปที่ Dapr sidecar โดยมี input ที่จะต้องกำหนดดังนี้
