@@ -1,67 +1,70 @@
 ---
 layout: post
 title: "สิ่งที่ได้เรียนรู้จากการอ่าน(ฟัง)หนังสือช่วงครึ่งแรกของปี 2023"
-date: 2023-07-05
+date: 2023-07-26
 tags: [book, soft-skill]
 ---
 
 ## 101 Essays That Will Change The Way You Think
-- Take responsibility for your thoughts and feelings. Disconnect emotions from the external distractions of daily life. Feel the emotions that come along - and let it go
-- Create a daily routine by recognising the small habits that keep your mind calm and do that every day to kill procrastination.
-- Raise your happiness limit. When you held back a celebration because it would make your less achieving friends uncomfortable. Just raising happiness limit by holding on to that sweet feeling for longer. You can be happy despite your circumstances.
-- Let your creativity flow without judgement - it only has to be something you enjoy doing.
-- Make your skills autonomous - Learn all about the skill you are interested in, next try to remember a series of events of applying the skill. Last, Take you into autopilot through repetition.
-- Build your self-esteem. Consciously work and evaluate your skills to grow confidence. Hold yourself high that aren't dictated from outside but controlled by internal values.
-- Balance your passion and purpose. Don't pick one over the ohter but understand where one starts and the other ends. Passion will ebb as your make progress. Purpose will keep you focused and encourage to delay instant gratification.
-- Learn to rest. Sleep well, find the time to be idle.
-- Avoid judging people especially younger people, but it can lead to stress and anxiety.
-- Change your perspective, learn how to use the power of negative thinking to improve your life. You can't control what the world gives you.
-- Treat the world with kindness.
+![101 Essays That Will Change The Way You Think](/assets/2023-07-26/2023-07-26-101-essays-that-will-change-the-way-you-think.jpeg)
+
+- เปลี่ยนความคิดว่าเราเป็นผู้กำหนดสิ่งที่เกิดขึ้นต่อความคิดและความรู้สึกของเรา หาเวลาเลี่ยงเอาอารมณ์ไปผูกกับสิ่งภายนอกในชีวิตประจำวัน รับรู้อารมณ์ที่เกิดขึ้นมาและปล่อยมันไป
+- สร้างกิจวัตรประจำวันโดยการทำอะไรก็ได้ให้เกิดการสร้างนิสัยใหม่ทีละเล็ก ๆ น้อย ๆ ที่ช่วยให้จิตใจเราสงบ และทำแบบนั้นทุกวันเพื่อป้องกันการผลัดวันประกันพรุ่ง
+- เพิ่มขีดจำกัดความสุขของเรา เวลาดีใจอยากฉลองไม่ต้องไม่ต้องกั๊กไว้เหตุเป็นเพราะมันอาจทำให้เพื่อนที่ไม่ได้รับความสำเร็จรู้สึกไม่สบายใจ เราควรจะเก็บรักษาความรู้สึกดี ๆ นั้นไว้ให้นานขึ้นมากกว่า และเราสามารถมีความสุขอยู่ในสถานการณ์ไหนก็ตาม
+- ปล่อยให้ความคิดสร้างสรรค์ไหลไปโดยไม่ต้องไปกั๊กมันไว้ จดจำช่วงเวลาที่เราเพลิดเพลินไว้
+- ทำให้ทักษะของเรากลายเป็นสิ่งที่ทำด้วยความเคยชินเรียนรู้ทุกสิ่งเกี่ยวกับทักษะที่เราสนใจ ต่อมาพยายามจำความเป็นมาตามลำดับของเหตุการณ์ในการใช้ทักษะนั้น สุดท้ายก็นำเราเข้าสู่โหมดอัตโนมัติด้วยการทำซ้ำ
+- สร้างความเชื่อมั่นในตัวเองด้วยการทำงานและประเมินทักษะของเรา ยกตัวเราเองให้สูงโดยโดยค่านิยมภายในที่ไม่ได้ถูกกำหนดจากภายนอก
+- ควบคุมความชอบ (passion) และจุดมุ่งหมายให้สมดุลกัน อย่าเลือก passion มากกว่าความหมายในชีวิต แต่ให้เข้าใจว่า passion เป็นเพียงของชั่วคราวและจะหายไป แต่จุดมุ่งหมายจะช่วยให้เรามีสมาธิและหลีกเลี่ยงการไขว่คว้าหาความสุขแบบเร่งด่วน (instant gratification)
+- เรียนรู้การพักผ่อน หาเวลาให้เป็นช่วงที่ไม่ต้องทำหรือคิดอะไร
+- หลีกเลี่ยงการตัดสินคนโดยเฉพาะเด็ก ๆ มันอาจนำไปสู่ความเครียดได้
+- ฝึกให้เกิดประโยชน์จากการคิดเชิงลบเพื่อเพิ่มประสิทธิภาพในชีวิต เราไม่สามารถควบคุมสิ่งที่โลกให้กับเราได้
+- อยู่ร่วมกับคนอื่น ๆ ด้วยความเมตตาต่อกัน
 
 ## The Subtle Art of Not Giving a Fuck
-- Whatever you do in life will be a struggle, so you need to find the right struggle that's right for you, but don't say no to all struggles and tasks that don't bring you joy. You can't have a pain-free life but what pain do you want to sustain?
-- Suffering can lead to great things, but comparing yourself to others will lead to disappointment.
-- Find values worth living based on reality, helpful to society, immediate and controllable
-- Positive change only happens when you take full responsibility for your life. Accept your mistake and insecurities if you want to see positive change. (โดนแฟนทิ้ง โทษแฟน แทนที่จะเป็นเรื่องงานบ้าน ไม่ช่วยเหลือซึ่งกันและกัน)
-- Manson's Law of Avoidance
-- Buddishm teaches identity is an illusion - if you identify yourself as career-minded person who put your job first. If you fail to pull it off perfectly you will lose everything (job, respect, identity). Free yourself from identity and you will be able to do whatever makes you happy.
-- Stop giving a fuck about fame, power, immortality. Instead concentrate on here and now. Spread happiness and joy where you are.
+![The Subtle Art of Not Giving a Fuck](/assets/2023-07-26/2023-07-26-the-subtle-art-of-not-giving-a-fuck.jpg)
 
-## How to Talk to Anyone
+หนังสือได้เล่าถึงการใช้ชีวิตอย่างมีความสุขด้วยการให้ความสำคัญกับสิ่งที่สำคัญจริง ๆ และเลือกที่จะ “ช่างแม่ง”
+- คนเราอยากจะประสบความสำเร็จในชีวิตจะต้องดิ้นรนอย่างต่อเนื่อง ดังนั้นถ้าเราจะดิ้นรนทั้งทีก็จำเป็นต้องหาสิ่งที่เราดิ้นรนที่เหมาะสมที่สุดสำหรับเรา แต่อย่าปฏิเสธสิ่งที่ต้องดิ้นรนทุกอย่างที่ไม่นำความสุขมาให้เรา เราไม่สามารถมีชีวิตที่ไม่มีความเจ็บปวดได้ แต่เราสามารถเลือกได้ว่าความเจ็บปวดใดที่เราต้องการทนอยู่กับมันต่อไป
+- ความทุกข์ทรมานอาจนำไปสู่สิ่งที่ดีกว่า แต่การเปรียบเทียบตัวเองกับคนอื่นจะนำไปสู่แต่ความผิดหวัง
+- เราควรค้นหาเราค่าในการดำเนินชีวิตโดยเน้นไปที่ความเป็นจริง มีประโยชน์ต่อสังคม และสามารถลงมือทำได้
+- กฎของการหลีกเลี่ยงของแมนสัน ([Manson's Law of Avoidance](https://markmanson.net/breakthrough/023-the-law-of-avoidance)) กล่าวไว้ว่า *"เราจะหลีกเลี่ยงสิ่งใด ๆ ที่คุกคามตัวตนของเรา"* เช่น เราโดนแฟนทิ้ง เราก็จะโทษแฟน แทนที่จะเป็นเรื่องงานบ้าน ไม่ช่วยเหลือซึ่งกันและกัน การเปลี่ยนแปลงที่ดีจะเกิดขึ้นก็ต่อเมื่อเรารับผิดชอบในชีวิตของเราอย่างเต็มที่ ยอมรับความผิดพลาดและความไม่มั่นคงของเรา
+- พุทธศาสนาสอนว่าตัวตนเป็นเพียงความหลอกลวง หากเรามองว่าตัวตนของเราคือคนที่ประสบความสำเร็จ ยิ่งสูงยิ่งหนาว หากเราพลาดขึ้นมา เราอาจสูญเสียทุกอย่าง (งาน ความเคารพ รวมถึงตัวตนด้วย) แต่ถ้าเราปลดปล่อยตัวเราจากตัวตน เราจะสามารถทำสิ่งใดก็ได้ที่ทำให้เรามีความสุข
+- อย่าไปให้ความสำคัญกับชื่อเสียงและอำนาจ แต่จงให้ให้ความสำคัญกับสิ่งที่ทำในปัจจุบัน มอบความสุขให้กับทุก ๆ ที่และทุก ๆ คน
 
 ## The Goal
-- Alex Rogo - factory manager rushing to save factory from closing.
-- He noticed machine struggling to keep up with demand, not until he investigated entire end-to-end the bottleneck so he improves profitability. We won't face the same bottleneck forever, we need continuous monitoring
-- Maximum profitability = prioritsation of throughput, inventory and operational expenses. Monitor them to identify areas of improvement, reduce waste
-- Hypothese-driven development to identify what might cause the issue, then gather data, experiment and test them
-- He involved workers in the improvement process by leveraging their knowledge. Giving autonomy, sense of ownership, job security, work-life balance
+![The Goal](/assets/2023-07-26/2023-07-26-the-goal.jpeg)
 
-## The One Thing
-## Split the Pie
-## Drive
+หนังสือได้เล่าเรื่องราวเกี่ยวกับ Alex Rogo - ผู้จัดการโรงงานที่เข้ามากอบกู้เพื่อช่วยบริษัทให้รอดพ้นจากการปิดตัวลง
+- Alex สังเกตเห็นเครื่องจักรไม่สามารถทำงานได้ทัน scale ที่มี แต่ไม่สามารถแก้ได้จนกระทั่งเขาระบุคอขวด (bottleneck) ของระบบได้ หลังจากที่ปรับแก้แล้วก็ต้องเข้าใจด้วยว่าเมื่อเวลาผ่านไป คอขวดก็จะเปลี่ยนไปด้วย ดังนั้นเราต้องติดตาม (monitor) ระบบอย่างต่อเนื่อง เพื่อแก้ไขคอขวดได้ทันท่วงที
+- Alex คำนวณกำไรสูงสุดคือการจัดสมดุลระหว่าง ความสามารถในการผลิต (throughput) อุปกรณ์และทุนที่มีอยู่ (inventory) และค่าใช้จ่ายในการดำเนินการ (operational expense) ต้อง monitor เพื่อปรับปรุงระบบและลดการสูญเสีย (waste) อย่างต่อเนื่อง
+- Alex ใช้การพัฒนาบนสมมติฐาน ([hypothesis-driven development](https://www.thoughtworks.com/en-th/insights/articles/how-implement-hypothesis-driven-development)) เพื่อคาดเดาสาเหตุที่อาจทำให้เกิดปัญหา จากนั้นรวบรวมข้อมูล ทดลองและทดสอบ
+- Alex นำพนักงานเข้ามาอยู่ในกระบวนการปรับปรุงโดยการนำความรู้ของพนักงานมาใช้ ให้ความรับผิดชอบและเชื่อมั่นในตัวพนักงานรวมถึงสมดุลในชีวิตของพนักงาน (work-life balance)
 
 ## Designing Your Life
-- Find balance in four critical areas in life: (mental and physical) health, (paid and volunteer) work, play and (partners, children, friends, pets) love
-- When interested in new thing, ask yourself with a beginner mind "What is the life of a ... looks like?" How much of it really involves ...?"
-- Find the balance between workview (what philosophy on work and what it means to you?) and lifeview (what philosophy on life and what it means to you?)
-- Get unstuck by drawing mind mapping of association of what you enjoy doing
-- Design multiple lives and parallel paths.
+![Designing Your Life](/assets/2023-07-26/2023-07-26-designing-your-life.jpeg)
 
-## Effortless
+หนังสือเล่มนี้เล่าถึงความสุขที่แท้จริงนั้นเกิดจากการออกแบบชีวิตที่ตัวเองต้องการต่างหาก
+- เราต้องหาสมดุลในสี่ด้านที่สำคัญในชีวิต: สุขภาพทางกายและจิตใจ, งาน (ที่ได้รับค่าจ้างและงานอาสา), ความสนุกสนาน และความรัก (ตั้งแต่คู่ครอง ลูก เพื่อน สัตว์เลี้ยง)
+- เราควรค้นหาสมดุลระหว่างมุมมองในการทำงาน (วิธีคิดเกี่ยวกับงานและความหมายของงานต่อเรา) และมุมมองในการดำเนินชีวิต (วิธีคิดเกี่ยวกับชีวิตและความหมายของชีวิตต่อเรา)
+- เมื่อเราสนใจเรื่องใหม่ ๆ ลองถามตัวเองด้วยความคิดของคนใหม่ที่ไม่เคยรู้เรื่องนั้น ๆ มาก่อน "ชีวิตของ ... มีลักษณะอย่างไร?" "มันมีความเกี่ยวข้องกับ ... มากน้อยแค่ไหนจริง ๆ?"
+- หากเราติดกับการออกแบบชีวิตตามการหาสมดุลข้างบน ไม่รู้ว่าจะเริ่มอย่างไร ให้ลองสร้างแผนผังความคิด (mind mapping) ของสิ่งที่เราชอบทำขึ้นมา
+- เวลาออกแบบชีวิตให้เผื่อทางเลือกที่หลากหลายและสามารถทำคู่ขนานกันไปด้วย
 
 ## Talking to Strangers
-- With the smallest glimmer of information we just people we don't know at all. We are confident in our own complexity but strangers are easy.
-- We are incapable of spotting deception - we assume that people tell the truth. On average people correctly identify liars just 54 percent of the time. Does it matter? Is truth important for society to function? 
-- What you see on people's faces doesn't tell the whole story. We easily and completely misjudge them.
-- The better way on how to talk to strangers is to stop making assumptions.
-- We don't invest enough time and patience in truly listening to and understanding each other.
+![Talking to Strangers](/assets/2023-07-26/2023-07-26-talking-to-strangers.jpeg)
+
+หนังสือเล่มนี้เล่าถึงปัญหาด้านมุมมองต่อคนที่ไม่รู้จักหรือคนแปลกหน้า
+- พวกเราสามารถตัดสินคนที่ไม่รู้จักเลยด้วยเพียงข้อมูลที่มีน้อยมากเพราะพวกเรามั่นใจว่าตัวเองนั้นอ่านใจคนเก่ง
+- ในหนังสือกล่าวว่าโดยเฉลี่ยคนเราสามารถจับโกหกได้ถูกต้องเพียง 54 เปอร์เซ็นต์เอง นั่นหมายความว่าเรามีโอกาสครึ่งนึงที่ไม่สามารถจับโกหกได้ สิ่งที่เราเห็นบนใบหน้าของคนไม่ได้บ่งบอกเรื่องราวทั้งหมด ประเด็นคือแล้วการจับโกหกมันสำคัญหรือไม่? การพูดความจริงมีความสำคัญต่อการขับเคลื่อนในสังคมมากแค่ไหน?
+- วิธีที่ดีที่สุดในการคุยกับคนแปลกหน้าคือหยุดมโนซะ
+- คนเราไม่ลงทุนเพียงพอในการฟังและเข้าใจกันอย่างแท้จริงด้วยความอดทนอย่างเพียงพอ
 
 ## The Power of Regret
-- Regret can change lives for the better - yours included.
-- Live with and learn from regrets is a stepping stone to a proactive, productive, and purposeful life.
-- "No regrets" means no growth - and that's the most regretful choice
-- Stop punishing yourself with "If only" รู้งี้ทำแบบนี้ดีกว่า - use regret as a catalyst to propel us toward a better future.
-- 3 Steps: Undo (with a sincere apology) - At least (do something with meaningful and newfound purpose) - Analyze (What lessons can I learn from my regret?. Moving forward, I'm going to ...)
+![The Power of Regret](/assets/2023-07-26/2023-07-26-the-power-of-regret.jpeg)
 
-## The Happiness of Pursuit
-## Thinking in Systems
+หนังสือเล่มนี้พูดถึงความเสียดาย (regret) ทำงานอย่างไร และจะเปลี่ยนมันให้เป็นพลังบวกที่ขับเคลื่อนชีวิตเราได้อย่างไร
+- ความเสียดายสามารถเปลี่ยนชีวิตให้ดีขึ้นด้วยการเรียนรู้และอยู่กับมัน เพื่อเปลี่ยนเป็นตัวกระตุ้นให้มีชีวิตที่ดีขึ้น รวมถึงชีวิตของเราด้วย
+- ทางเลือกที่น่าเสียดายที่สุดการพยายามให้ไม่มีความเสียดาย เพราะนั่นหมายความว่าเราจะไม่ได้เรียนรู้และเราจะไม่เติบโต
+- หยุดลงโทษตัวเองด้วยคำว่า "รู้งี้" ได้แล้ว ใช้ความเสียดายเป็นตัวเร่งแรงให้เราเดินไปสู่อนาคตที่ดีกว่าด้วย 3 ขั้นตอนคือ แก้ไข (ด้วยการขอโทษอย่างจริงใจ) - อย่างน้อย (ทำสิ่งใดสิ่งนึงด้วยความจริงใจและจุดมุ่งหมายใหม่) - วิเคราะห์ (เรียนรู้บทเรียนจากความเสียดายของเรา และก้าวไปข้างหน้า เราจะ ...)
+
+> ยังเหลืออีกทั้งหลายเล่มเลย เอาไว้ต่อ part 2 ละกันนะ ฮ่า ๆๆ
