@@ -1,5 +1,0 @@
-- https://www.thoughtworks.com/clients/finavia
-- https://www.thoughtworks.com/en-th/clients/marimekko-decision-factory
-- https://www.thoughtworks.com/clients/mackmyra
-- https://www.genpact.com/insight/the-mondelez-international-recipe-for-fast-track-transformation
-- https://www.thoughtworks.com/insights/articles/get-set-for-sustainable-transformation
