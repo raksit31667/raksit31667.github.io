@@ -5,15 +5,49 @@ date: 2023-09-20
 tags: [soft-skill]
 ---
 
-3 ศูนย์
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JWjeKu51_lw?si=Pxik0vgqPkaMT7af" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Body/Gut -> Rights -> Anger -> Core emotion
-Head -> Danger -> Fear/Anxiety -> Unpredictability
-Heart -> Identity -> Shame
+เมื่อวันก่อนได้มีโอกาสเข้าไปทำ workshop เกี่ยวกับ Ego เพราะเราสนใจเกี่ยวกับจิตวิทยาของคนและวิธีการใช้งานให้เกิดประโยชน์ต่องานและชิวิตประจำวัน โดยเราได้ติดตามคุณ [Chris](https://chrisza.medium.com/) เกี่ยวกับเรื่องนี้อยู่แล้วก็เลยมาศึกษาเพิ่มเติมอีกที
 
-Ego = mechanism to protect identity
-https://medium.com/chris-dialogue/defense-mechanism-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B0-22fcd65008b2
-Awareness precede options
-Options precede changes
-Everyone has innate ability to choose the best option for themselves
-ช่วยคนอื่นปรับอันไหนยาก-ง่าย Identity > Requirement > Defense mechanism
+## ปูพื้นเรื่อง Enneagram
+เราเองก็ไม่เคยมีพื้นฐานมาก่อนละก็ไม่เชื่อเรื่องการมาชี้บอกว่าคน ๆ นี้เป็นอะไรยังไง (personality labelling) เท่าไร ก็เลยไม่ได้อินกับเรื่อง Enneagram มาก แต่ก็ฟังและเข้าใจไว้เป็นแนวคิดใหม่ ๆ ครับจะได้คุยกับคนอื่นรู้เรื่อง ฮ่า ๆๆ  
+
+### แนวคิด 3 ศูนย์ (ไม่ใช่ 3-0)
+[3 ศูนย์](https://www.urbinner.com/post/3cs-head-heart-hand#viewer-58eaa) คือ ความสามารถในการทำงานของคนแบ่งตามการทำงานของสมองที่เกี่ยวข้องในส่วนต่าง ๆ ได้แก่
+
+1. **ศูนย์ท้อง (Body/Gut)** เกี่ยวข้องกับร่างกายและสิ่งที่เกิดขึ้นภายนอก
+2. **ศูนย์หัว (Head)** เกี่ยวข้องกับการคิด วิเคราะห์ แยกแยะ
+3. **ศูนย์ใจ (Heart)** เกี่ยวข้องกับความรู้สึกและอารมณ์
+
+| ศูนย์    | เหตุการณ์ที่ใช้ศูนย์นี้  | สิ่งที่กระตุ้นศูนย์นี้                 |
+|--------|-----------------|------------------------------|
+| ศูนย์ท้อง | สิทธิ์             | อารมณ์พื้นฐาน (เศร้า โกรธ เครียด) |
+| ศูนย์หัว  | ภยันอันตราย       | ความกลัว ความกังวล ความไม่แน่นอน |
+| ศูนย์ใจ  | ตัวตน (Identity) | ความละอายในตัวเอง             |
+
+โดย Ego นั้นจะทำงานเกี่ยวข้องโดยตรงกับ**ศูนย์ใจ**
+
+## เข้าสู่เรื่อง Ego
+Ego สั้น ๆ ก็คือกลไกที่คนใช้ปกป้องตัวตนของตัวเอง ซึ่งคนเราจะมี requirement บางอย่างที่เข้าเกณฑ์ว่าคน ๆ นี้มีตัวตนแบบนี้ หากมีใครเข้ามาท้าทายตัวตนและ requirement ของเราแล้ว คนเราก็จะหยิบ [Defense mechanism](https://en.wikipedia.org/wiki/Defence_mechanism) ขึ้นมาสารพัดท่าเพื่อปกป้องตัวตนนั้น โดยสามารถเข้าไปดูท่าต่าง ๆ ได้ใน blog [Defense Mechanism ของคนเราไม่เหมือนกันนะ](https://medium.com/chris-dialogue/defense-mechanism-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B0-22fcd65008b2)
+
+จากนั้นก็ทำ workshop สั้น ๆ มีขั้นตอนดังนี้
+
+1. List ตัวตนของเราออกมา 3 ข้อ
+2. เลือกตัวตนที่ใช่ที่สุดมา 1 อันจากนั้น list requirement ที่บ่งบอกถึงตัวตนนั้น
+3. List Defense mechanism ที่ใช้บ่อยเพื่อปกป้องตัวตนนั้น ๆ
+4. แบ่งปันผลกับเพื่อน ๆ แล้วให้พวกเค้าเสนอแนะเพิ่มว่าเราสามารถใช้ Defense mechanism แบบอื่น ๆ ที่ work เหมือนกัน
+
+## ปิดท้ายด้วยการนำไปใช้
+จาก workshop เราจะพบกับความจริงที่ว่า
+
+1. เมื่อเรารู้ทันตัวตนของเราตลอดแล้วเราจะมีตัวเลือก Defense mechanism ที่สามารถหยิบมาใช้เหมาะสมตามสถานการณ์
+
+    > Awareness precede options. Options precede changes.
+
+2. เราไม่สามารถยัดเยียด Defense mechanism ที่ work กับเราทุกอันไปใช้กับคนอื่นได้เพราะมันขัดกับตัวตนของเค้านั่นเอง สิ่งที่เราทำได้คือ "เสนอแนะ" กับเค้าด้วยการให้ตัวเลือก
+
+    > Everyone has innate ability to choose the best option for themselves.
+
+3. สิ่งที่เราช่วยคนอื่นปรับได้ไล่จากยากไปง่ายคือ Identity > Requirement > Defense mechanism
+
+> เป็น workshop สั้น ๆ แต่ก็ได้เรียนรู้และขบคิดเกี่ยวกับตัวเองและคนอื่น ถึงแม้เราจะไม่ค่อยอินเรื่อง Enneagram แต่การกลับมานั่งนึกว่าเราเป็นใคร ตัวตนที่แท้จริงของเราคืออะไร (แม้ว่าจะคุยกับตัวเองบ่อยแต่ก็ไม่ลึกเท่านี้) มันก็เป็นสิ่งที่เยียวยาจิตใจให้เราเดินไปต่อในชีวิตได้เหมือนกัน
