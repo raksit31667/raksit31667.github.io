@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "สรุปสิ่งที่น่าสนใจจากงาน XConf Thailand 2023"
-date:   2023-09-29
+date:   2023-10-06
 tags: [conference]
 ---
 
