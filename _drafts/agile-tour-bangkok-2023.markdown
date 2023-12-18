@@ -5,113 +5,108 @@ date: 2023-12-08
 tags: [agile]
 ---
 
-Agile Tour BKK 2023
+เมื่อเดือนที่แล้วได้มีโอกาสไปเข้าร่วมงาน [Agile Tour BKK 2023](https://www.agiletourbkk.org/) ซึ่งก็ตามชื่อเกี่ยวกับการแบ่งปันประสบการณ์ในการทำงานในกรอบความคิดแบบ Agile ที่ไม่ได้ติดอยู่กับแค่ในการพัฒนา software อย่างเดียว ไหน ๆ ก็ไปแล้วก็มีสรุป session ที่น่าสนใจติดไม้ติดมือมาด้วย ไปดูกัน
 
-3 Centers
-- Link to my old blog
-- Head belief -> plan?, did we anticipate risk?, ROI?, data-driven
-  - Head
-    - Fear is not motivation -> don't use to drive to the goal
-  - Heart
-    - what is transformation? we should be proud of ourselves being waterfall
-  - Body
-    - We just simply don't know what to do, how to do it right
-- Heart belief -> be agile, world class, professional, user-centric, if you are committed to the goal, everything will follow
-  - Head
-    - Risks? Worth?
-  - Body
-    - No! this is not tranformation
-- Body belief -> can't explain much, example, just follow me
-  - Head
-    - Risks? Worth?
-  - Heart
-    - I wanna know the meaning of being Agile.
-- Action items
-  - Assess your own 3 centers (internal resources)
-  - Ask yourself
-    - What is the meaning of transforming from A to B?
-    - What kind of uncertainty we might face in the future?
-    - What do I need to do to kickstart transformation from A to B?
-- Example: ceremonies
-  - See photos in my mobile
+## 3 centers of intelligence: Blind spot of transformation approach
+จากบทความที่แล้วเกี่ยวกับ [3 ศูนย์]({% post_url 2023-09-20-deep-dive-to-ego-workshop %}) เราสามารถนำแนวคิดนี้มาปรับใช้กับการทำ transformation ในองค์กรได้เช่นกัน ยกตัวอย่างสถานการณ์ผู้นำกับลูกน้องพูดคุยกันในเรื่อง transformation แล้วปรากฏว่าศูนย์ไม่เหมือนกันจะออกมาลักษณะประมาณนี้
 
-Learning
-- We rely on People team to support learning and development by guessing what employees need to learn. Eventually they will run out of ideas.
-- Team members should have the authority to plan their own learning journey
-- Know which skills we need to focus
-  - They can use skill matrix to visualise -> comparing required skills with my skills
-  - Most common tools, frequently used tech, common tech, team-specific skills, lib, frameworks
-  - Build radar for skills that daily, weekly, rarely used
-  - Use GitLab/GitHub
-- Brachistochrone problem
-  - Fastest way to learn is to connect subjects to relevant ones
-  - Attach practices to the value those practices give
-- Learn for knowledge, practice for skills
-- SFIA
+> หัวหน้าศูนย์หัว: เราจะมา transform องค์กรของเรา โดยเราจะมีแผนแบบนี้ เราประเมินความเสี่ยงไว้แบบนี้ แล้วเราจะได้ return of investment เท่านี้  
+> ลูกน้องศูนย์ใจ: transformation คืออะไร เราทำงานในกรอบ waterfall ก็ดีออยู่แล้วนิ  
+> ลูกน้องศูนย์ตัว: แล้วต้องทำอะไรยังไงบ้าง
 
-Exxon
-- Start with culture change, then transform it later
-- Adopt agile -> more visibility, more focus and priority, more alignment to business
-- Q: Improve efficiency and effectivness -> What about employee satisfaction? -> team morale survey -> agile not related to employee satisfaction
-- Don't hide problems
-- Understand why you need to transform -> do not start transformation, re-organise, or think about scaling
+> หัวหน้าศูนย์ใจ: เป้าหมายของเราคือเราจะเป็น Agile เป็น world-class, professional, user-centric ถ้าเราทุกคนตั้งใจมุ่งไปที่เป้าหมาย เดี๋ยวแผนหรืออะไรทุกอย่างก็จะตามมา  
+> ลูกน้องศูนย์หัว: แล้วมันเสี่ยงมากขนาดไหน แล้วลงทุนไปคุ้มหรอ  
+> ลูกน้องศูนย์ตัว: เฮ้ย! นี่ไม่ใช่ transformation แล้ว
 
-Improvise
-- Zoom (passing to others)
-- Sync clapping
-- Count 1-10
-- Fail then celerate
+> หัวหน้าศูนย์ตัว: การ transformation มันยาวไกลอธิบายเป็นภาพยาก เรามีตัวอย่างจากองค์กรที่ประสบความสำเร็จแล้ว มาลุยกัน!  
+> ลูกน้องศูนย์หัว: แล้วมันเสี่ยงมากขนาดไหน แล้วลงทุนไปคุ้มหรอ  
+> ลูกน้องศูนย์ตัว: แล้ว transformation คืออะไร ความหมายของ Agile คืออะไร
 
-Creating and sustaining high-performing teams
-- High-performing = result x team member engagement
-- Finding the right people is challenging
-- In order to be sustainable, we need to pay attention to other dimensions (e.g., work is challenging)
-- Agile is not designed for cost optimisation, but designed for building word-class products
-- How to make high-performing
-  - 10 things which require zero talent
-  - Make the success of the team more important than what you will get out of your involvement
-  - Make team members feel valued (kudos session, celebrating birthdays, welcoming new members)
-- How to lead an outstanding team
-  - Have a clear purpose and guiding principles
-    - Think as an owner
-    - Eat your own dog's food
-    - Create and uphold a working agreement (what are the rules and behaviours we want to abide by in our team?)
-    - SBI feedback
-    - Use tools to deepen your self-awareness and your other-awareness
-    - Book: Strength Finder
-    - Create memorable experiences with the team
-    - Create open communication
-      - Radical Candor
-      - Tuckman Revisited -> always in storming phase -> care each other more than win-lose
+จากตัวอย่างนีี้จะเห็นว่ามันเป็นเรื่องธรรมชาติที่มันจะเกิดขึ้น แต่ในฐานะคนเป็นผู้นำเราสามารถเตรียมตัวตอบคำถามเหล่านี้ได้ด้วยวิธีการต่อไปนี้
 
-Transformation coaching
-  - Coach starts from learning about coaching, mentoring, facilitating
-  - In reality, coach is hired to get the job done -> lack confidence, some days I question if I provide any value.
-  - Edge of Tomorrow -> learn by doing things repetitively
-  - Learn from real-world constraints -> bring the whole team -> repetitive practice -> learning that sticks
-  - Goals & Measures -> Bring Awareness -> Facilitate learning -> Empower
-  - Example: 24 doors
-    - Goal: Manage unplanned work better
-    - Measure: 10% or less carryover
-    - Bring awareness: multiple roles, unhealthy work intake, secret work
-      - Ask
-      - Share observations
-      - Tools
-      - Support the team for reflection & reframing
-    - Coaching techniques: make everything visible, use house as a metaphor
-    - Facilitate learning: 5 whys -> Unware of what we are doing as a whole, small group of decision makers
-    - Empower team: Problems, Impacts, Goals, Solutions
-  - Example: The black box
-    - Goal: Reliable release schedule
-    - Bring awareness: waste, lack of trust
-    - Coaching techniques: value stream mapping
-    - Facilitate learning: shared understanding on the whole release, flow efficiency
-    - Empower team: understand the steps we rely on dependencies, explore options to reduce lead time
-  - Example: Tuesday surprise
-    - Goal: Reliable release schedule
-    - Bring awareness: mutiple individual branches, merge on Tuesday, cherry pick on Wednesday
-    - Coaching techniques: branching strategy
-    - Facilitate learning: effective way to do branching
-  - Q: What is the common anti-pattern of team in Dojo?
-    - Team vs Group
-    - Task breakdown
+1. ประเมินตัวเองก่อนว่าเราอยู่ศูนย์ไหน
+2. ถามตัวเองว่า
+   1. การ transform องค์กรจาก A ไป B มันหมายความว่าอะไร
+   2. เราจะเจอความไม่แน่นอนอะไรในอนาคต
+   3. เราต้องทำอะไรเพื่อเริ่มต้นการ transform องค์กรจาก A ไป B
+
+ในฐานะลูกน้องเราก็สามารถนำแนวคิด 3 ศูนย์มาปรับใช้กับการพูดเพื่อโน้มน้าวใจคนฟังให้เข้าร่วมการ transformation ได้ ยกตัวอย่างเช่นการกำหนด ceremonies ในทีม
+
+### Standup
+- **คิดแบบศูนย์หัว**: การจัด standup ช่วยลดหรือกำจัดความเสี่ยงอะไรออกไปได้บ้าง  
+- **คิดแบบศูนย์ใจ**: จุดประสงค์ของการจัด standup คืออะไร
+- **คิดแบบศูนย์ตัว**: แล้วใครต้องทำอะไรยังไง
+
+### Blameless Postmortem
+- **คิดแบบศูนย์หัว**: ทำไมการ "blame" กันถึงทำให้สถานการณ์แย่ลง พร้อมข้อมูลสนับสนุน
+- **คิดแบบศูนย์ใจ**: เรื่องราวของการทำ blameless postmortem ที่ประสบความสำเร็จ
+- **คิดแบบศูนย์ตัว**: Do & Don't
+
+## Sparking Change: Fostering a Distributed Learning Culture for High-performance teams
+ผู้พูดเริ่มเล่าว่าในองค์กรส่วนใหญ่แล้วพนักงานจะพึ่งพาแผนก Human Resources หรือ People team ในการจัดเตรียม resource และ career path ให้พนักงานได้มาเรียนรู้ แน่นอนว่าใช้ได้ในช่วงแรกแต่สุดท้ายแล้วสิ่งที่เกิดขึ้นคือ
+
+- คนจัดเตรียมก็จะหมดไอเดีย
+- Resource และ career path ไม่ตรงกับสิ่งที่พนักงานต้องการ
+
+หมายความว่าที่แท้จริงแล้วสมาชิกในทีมก็ควรจะเป็นคนที่วางแผนและกำหนดเส้นทางในการเรียนรู้ของทีมกันเอง เพราะพวกเขารู้ดีที่สุดว่าทักษะไหนที่ควรจะต้อง focus บ้าง โดยทีมสามารถนำเครื่องมือต่าง ๆ เข้ามาช่วยได้ เช่น
+
+- [Skill matrix](https://www.rewo.io/skills-matrix-for-manufacturing/)
+- [Technology radar](https://www.thoughtworks.com/radar)
+- รวม list ของเครื่องมือ, library, framework, tech stack ที่ใช้บ่อยในองค์กร
+
+![GitHub langstats](/assets/2023-12-18-github-lang-stats.png)
+<https://github.com/Destaq/langstats>
+
+หลังจากที่เรารู้แล้วว่าเราต้องเรียนรู้อะไรต่อมาก็คือวิธีการเรียน องค์กรไม่ควรกำหนดวิธีตายตัวในการเรียน เช่น จะต้องเรียนผ่าน course หรือต้องอ่านหนังสืออย่างเดียวเท่านั้น ผู้พูดได้ยก [Brachistochrone problem](https://en.wikipedia.org/wiki/Brachistochrone_curve) ซึ่งเป็นปัญหาในทาง physics ซึ่งมีข้อสรุปว่า 
+
+> "หากวัตถุตกจากจุด A ไป B เส้นทางที่ตรงที่สุดไม่ใช่ทางที่เร็วที่สุดเสมอไป"
+
+ผู้พูดได้แนะนำว่าวิธีการที่เราจะเรียนรู้ได้เร็วที่สุดคือเชื่อมแนวคิดใหม่เข้ากับเนื้อหาอื่น ๆ ที่เกี่ยวข้อง และเชื่อมแนวปฏิบัติใหม่เข้ากับ value ที่ได้จากการทำสิ่งเหล่านั้น
+
+> จงเรียนรู้แล้วจะได้ความรู้ จงฝึกฝนแล้วจะได้ทักษะ
+
+## Notes from the Field: (Experiments in) Creating and Sustaining High Performing Teams
+ผู้พูดเริ่มจากว่าการที่ทีมจะเป็น High-performing ได้จะต้องประกอบไปด้วยผลลัพธ์และ engagement ของสมาชิกในทีม
+
+> High-performing = result x team member engagement
+
+แต่การที่เราจะได้มาซึ่งทั้งสองอย่างนั้นก็หมายความว่าเราก็ต้องมีคนที่ใช่นั่นเองซึ่งหาได้ยากมาก ๆ และที่ยากกว่าคือการรักษาทีมที่ High-performing แล้วให้คงอยู่ต่อไป ดังนั้นเราจะต้องมองในมุมอื่นนอกจาก mindset ของคน ๆ นั้นที่จะเอาเข้ามาด้วย เช่น
+
+- งานที่ High-performing team ได้ทำนั้นท้าทายมากขนาดไหน
+- งานที่ High-performing team สนใจด้าน product หรือออกสู่สายตาคนภายนอกมากขนาดไหน ได้ feedback กลับมาบ่อยไหม
+
+> Agile is not designed for cost optimisation, but designed for building word-class products
+
+แล้ววิธีการทำให้ทีมเป็น High-performing ล่ะมีอะไรบ้าง
+- [ทำ 10 อย่างที่จะทำให้พัฒนาได้โดยไม่จำเป็นต้องใช้พรสวรรค์](https://economics.virginia.edu/10-things-require-zero-talent)
+- เน้นความสำเร็จของทีมมากกว่าสิ่งที่เราจะได้ออกไปจากการเข้าไปอยู่ในทีม
+- ทำให้ความสำเร็จของทีมมีคุณค่ามีความหมาย เช่น จัด session ขอบคุณ ฉลองวันเกิด จัดงานต้อนรับสมาชิกใหม่ในทีม
+
+แล้วในฐานะผู้นำจะต้องดูแล High-performing team ยังไง
+- มีเป้าหมายและจุดประสงค์ของทีมที่ชัดเจน เป็นลายลักษณ์อักษรได้ยิ่งดี
+- คิดเหมือนกับว่าเราคือเจ้าของบริษัท
+- ปฏิบัติตามสิ่งที่เราพร่ำสอนคนอื่น ([Eat your own dog's food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food))
+- สร้างข้อตกลงในการทำงานร่วมกัน เป็นลายลักษณ์อักษรได้ยิ่งดี
+- ให้ feedback กันในทีมอย่างสม่ำเสมอ
+- ใช้เครื่องมือให้คนในทีมรู้จักตนเองและสมาชิกคนอื่นให้มากขึ้น เช่น [Strength Finder](https://priwziest.medium.com/clifton-strengths-finder-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%94%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%AB%E0%B8%B2%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B9%81%E0%B8%82%E0%B9%87%E0%B8%87-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%97%E0%B8%B3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%84%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B5%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87-b37e2e136cba)
+- สร้างสภาพแวดล้อมที่เอื้อต่อการพูดคุยอย่างตรงไปตรงมาโดยไม่รู้สึกกระแทกจิตใจ
+- ทำให้ทีมอยู่ในสถานะ [storming phase](https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development) เสมอ โดยในระหว่าง storming ทีมต้องเน้นจากการ care ซึ่งกันและกันมากกว่าหาผู้ชนะ-ผู้แพ้
+
+## Dojo Coaching Case Studies: Real-Life Example of Transformational Coaching
+ในปัจจุบันคนที่จะมาเป็น coach ให้คนอื่นได้ก็ต้องเรียนรู้วิธีการ coaching, mentoring, facilitating แต่ตอนลงสนามจริงกลับพบความจริงที่โหดร้ายว่าเขาจ้าง coach มาเพื่อทำงานให้มันจบ ๆ ไปโดยไม่สนใจว่าใครจะได้หรือเติบโตขึ้นมากแค่ไหน ดังนั้นในฐานะ coach เราต้องให้ทีมได้เรียนรู้จากการลงมือทำจริงบ่อย ๆ ซ้ำ ๆ เหมือนหนังเรื่อง [Edge of Tomorrow](https://www.imdb.com/title/tt1631867/) และสอนทีมให้เรียนรู้ในสภาพแวดล้อมเหมือนจริง ไปด้วยกันทั้งทีมไม่ใช่ส่งแค่คน ๆ เดียวไปเรียน  
+
+ผู้พูดได้เล่าให้ฟังว่าเวลา coach ทีมจะมีด้วยกัน 4 ขั้นตอนคือ
+> Goals & Measures -> Bring Awareness -> Facilitate learning -> Empower
+
+### ตัวอย่างที่ 1
+- **Goal**: ทำให้ทีมจัดการงานแทรกฟ้าประทานได้ดีขึ้น
+- **Measure**: มีงานที่ต้องโยนข้าม sprint ถัดไปเป็นสัดส่วนไม่เกิน 10%
+- **Bring awareness**: เอาข้อมูลทีมมากางให้ดูพบว่าทีมมาจากหลายแผนกหลายตำแหน่ง สอบถามเพื่อเข้าใจและหาต้นตอที่จำใจต้องรับงานแทรก
+- **Facilitate learning**: ใช้ technique 5 whys แล้วพบว่าสาเหตุคือไม่รู้ว่าใครทำอะไรกันอยู่ มีคนตัดสินใจเอางานเข้าเพียงไม่กี่คน
+- **Empower team**: ใช้ framework Problems, Impacts, Goals, Solutions
+
+### ตัวอย่างที่ 2
+- **Goal**: ทำให้ release schedule นิ่ง
+- **Bring awareness**: ทำให้ทีมเห็น waste ด้วย value stream mapping พบว่าสาเหตุคือทีมขาดความเชื่อใจซึ่งกันและกัน
+- **Facilitate learning**: สร้างความเข้าใจและหาข้อตกลงร่วมกันในการ release ขึ้นมาใหม่
+- **Empower team**: เข้าใจ dependencies และค้นหาทางเลือกอื่นในการลด lead time
