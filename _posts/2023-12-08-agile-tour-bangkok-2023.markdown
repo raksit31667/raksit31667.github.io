@@ -2,7 +2,7 @@
 layout: post
 title: "สรุปสิ่งที่ได้เรียนรู้จาก Agile Tour Bangkok 2023"
 date: 2023-12-08
-tags: [agile]
+tags: [conference, agile]
 ---
 
 ![Agile Tour BKK 2023](/assets/2023-12-18-agile-tour-bkk.webp)
