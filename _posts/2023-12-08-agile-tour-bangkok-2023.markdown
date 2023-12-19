@@ -5,6 +5,8 @@ date: 2023-12-08
 tags: [agile]
 ---
 
+![Agile Tour BKK 2023](/assets/2023-12-18-agile-tour-bkk.webp)
+
 เมื่อเดือนที่แล้วได้มีโอกาสไปเข้าร่วมงาน [Agile Tour BKK 2023](https://www.agiletourbkk.org/) ซึ่งก็ตามชื่อเกี่ยวกับการแบ่งปันประสบการณ์ในการทำงานในกรอบความคิดแบบ Agile ที่ไม่ได้ติดอยู่กับแค่ในการพัฒนา software อย่างเดียว ไหน ๆ ก็ไปแล้วก็มีสรุป session ที่น่าสนใจติดไม้ติดมือมาด้วย ไปดูกัน
 
 ## 3 centers of intelligence: Blind spot of transformation approach
@@ -91,6 +93,8 @@ tags: [agile]
 - ใช้เครื่องมือให้คนในทีมรู้จักตนเองและสมาชิกคนอื่นให้มากขึ้น เช่น [Strength Finder](https://priwziest.medium.com/clifton-strengths-finder-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%94%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%AB%E0%B8%B2%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B9%81%E0%B8%82%E0%B9%87%E0%B8%87-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%97%E0%B8%B3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%84%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B5%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87-b37e2e136cba)
 - สร้างสภาพแวดล้อมที่เอื้อต่อการพูดคุยอย่างตรงไปตรงมาโดยไม่รู้สึกกระแทกจิตใจ
 - ทำให้ทีมอยู่ในสถานะ [storming phase](https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development) เสมอ โดยในระหว่าง storming ทีมต้องเน้นจากการ care ซึ่งกันและกันมากกว่าหาผู้ชนะ-ผู้แพ้
+
+**Read more**: <https://tommclean.kumu.io/the-behaviors-of-high-performing-teams>
 
 ## Dojo Coaching Case Studies: Real-Life Example of Transformational Coaching
 ในปัจจุบันคนที่จะมาเป็น coach ให้คนอื่นได้ก็ต้องเรียนรู้วิธีการ coaching, mentoring, facilitating แต่ตอนลงสนามจริงกลับพบความจริงที่โหดร้ายว่าเขาจ้าง coach มาเพื่อทำงานให้มันจบ ๆ ไปโดยไม่สนใจว่าใครจะได้หรือเติบโตขึ้นมากแค่ไหน ดังนั้นในฐานะ coach เราต้องให้ทีมได้เรียนรู้จากการลงมือทำจริงบ่อย ๆ ซ้ำ ๆ เหมือนหนังเรื่อง [Edge of Tomorrow](https://www.imdb.com/title/tt1631867/) และสอนทีมให้เรียนรู้ในสภาพแวดล้อมเหมือนจริง ไปด้วยกันทั้งทีมไม่ใช่ส่งแค่คน ๆ เดียวไปเรียน  
