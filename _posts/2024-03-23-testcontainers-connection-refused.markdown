@@ -41,4 +41,4 @@ $ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 $ export TESTCONTAINERS_RYUK_DISABLED=true
 ```
 
-> ข้อจำกัดก็อาจจะอยู่ตรงที่ถ้าหยุด run test ลางคันแล้วตัว containers/networks/volumes/images อาจจะไม่ได้ถูก clean up อย่างที่ควรจะเป็น
+> ข้อจำกัดก็อาจจะอยู่ตรงที่ถ้าหยุด run test ลางคันแล้วตัว containers/networks/volumes/images อาจจะไม่ได้ถูก clean up อย่างที่ควรจะเป็น แต่ในกรณีปกิตก็นับว่าใช้ได้แล้วอ่ะนะ
