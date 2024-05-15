@@ -11,7 +11,6 @@ DATE := $(shell date +%Y-%m-%d)
 .PHONY: draft
 draft: check-title
 	@echo "Creating a new draft with title: $(title)"
-	@date=$$(date "+%Y-%m-%d")
 	@echo "---\nlayout: post\ntitle: \"$(title)\"\ndate: $(DATE)\ntags: []\n---" > _drafts/$(title).markdown
 	@echo "Draft created at _drafts/$(title).markdown"
 	@echo "Adding the draft to git"
