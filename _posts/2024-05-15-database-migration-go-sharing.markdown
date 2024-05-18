@@ -17,7 +17,11 @@ tags: [database, database-migration, practice, go, goose]
 
 ในกรณีที่มีการ deployment แล้วไม่ผ่านแล้วเราจำเป็นจะต้อง rollback การไม่มีเครื่องมือก็จะซับซ้อนมาก แล้วถ้าเกิดปัญหาขึ้นมา ข้อมูลก็อาจจะหายไปได้ ส่งผลโดยตรงต่อ user  
 
-ด้วยเหตุผลที่ว่ามานี้ จึงเกิดเครื่องมือ data migration ขึ้นเพื่อทำให้ขั้นตอนการจัดการการเปลี่ยนแปลงของ database นั้นเป็นไปแบบอัตโนมัติ ซึ่งจะมี feature คร่าว ๆ ประมาณนี้
+ด้วยเหตุผลที่ว่ามานี้ จึงเกิดเครื่องมือ data migration ขึ้นเพื่อทำให้ขั้นตอนการจัดการการเปลี่ยนแปลงของ database นั้นเป็นไปแบบอัตโนมัติ 
+
+![Database migration](/assets/2024-05-15-database-migration.png)
+
+ซึ่งจะมี feature คร่าว ๆ ประมาณนี้
 
 - **Version control**: เปรียบเสมือนเป็น Git ของ database ซึ่งเครื่องมือจะสร้าง table ขึ้นมาหนึ่งอันเพื่อทำการ track ว่า migration file ไหนที่ถูก run ไปแล้วเมื่อไร เมื่อเรา run migration อีกครั้ง file ที่เคยถูก run ไปก็จะไม่ถูก run ซ้ำ นอกจากนั้นแล้วเราก็สามารถเลือกที่จะ rollback กลับไปที่ version ที่ต้องการได้ ซึ่งสามารถสั่งได้ผ่าน application code หรือ command-line
 - **Migration script**: สามารถเลือกเขียนได้หลากหลาย format ทั้ง SQL และ YAML หรือแม้กระทั่งมี custom domain-specific language (DSL) เป็นของตัวเอง
@@ -74,6 +78,8 @@ goose: no migrations to run. current version: 0
 
 ![Goose DB version](/assets/2024-05-15-goose-db-version.png)
 
+ทีนี้เราลองแก้ไข migration file ที่เคยถูก run ไปแล้ว จากนั้นลอง restart ดูใหม่ จะพบว่าไม่มีการเปลี่ยนแปลงบน database เพราะเครื่องมือของเราป้องกันไม่ให้ script มันผิดเพี้ยนไปจากของบน database จริง (เกิดอีหรอบเดิม) นอกจากนั้นแล้วการ track version ก็จะยากขึ้นอีก 
+
 ## การใช้ database migration tool ช่วยในการทดสอบ
 ในการทดสอบระบบที่เชื่อมต่อกับ database เราสามารถทดสอบได้หลายระดับไล่ตั้งแต่
 
@@ -89,5 +95,18 @@ goose: no migrations to run. current version: 0
 <script src="https://gist.github.com/raksit31667/26dbae113d500ede5e2fffde5a4e56b8.js"></script>
 
 - **End-to-end test**: ทดสอบว่าบนระบบบน deployment environment จริงทำงานได้ตรงตามที่คาดหวังไว้ไหม เช่น บน API application ส่ง request ไปได้ response กลับมาถูกหรือไม่ เป็นต้น ซึ่งก็เป็นการทดสอบ database migration กลาย ๆ ว่าหลังจาก run ไปแล้วระบบมันเป็นอย่างไรด้วย
+
+## คำถามที่น่าสนใจจากใน session
+
+### Q: เราควรจะนำ migration ในส่วนของการสร้างข้อมูลไปรวมกับ schema หรือไม่
+คำตอบคือได้! ถ้าข้อมูลของเรามันเหมือนกันในทุก ๆ environment ประเด็นคือแล้วมันควรจะเป็นข้อมูลใน database ไหม มันเปลี่ยนแปลงบ่อยแค่ไหน หรือจริง ๆ แล้วมันเป็นแค่ configuration
+
+### Q: ในกรณีที่มีการเปลี่ยนแบบ breaking change เช่น เปลี่ยนหรือลบ column จะจัดการอย่างไร
+การทำ migration ลักษณะนี้เราจะมีขั้นตอนดังนี้
+
+1. เพิ่ม migration ในการสร้าง column ใหม่ขึ้นมาก่อนโดยที่เก็บ column เดิมไว้
+2. ทำการ migrate หรือแปลงข้อมูลจาก column เก่ามาที่ column ใหม่ โดยนะนำให้ทำเป็น process แยกจาก database migration ของ application หลักเพราะจังหวะที่เราไป run บน database ใหม่ก็ไม่จำเป็นต้อง migrate เพราะไม่มีข้อมูลอะไร
+3. เปลี่ยน application ให้มาใช้งาน column ใหม่
+4. เมื่อ column เดิมไม่ได้ใช้แล้วก็ค่อยเพิ่ม migration สำหรับการลบ column นั้นทิ้งไป
 
 > จะเห็นว่า database migration tool นั้นถูกสร้างมาเพื่อช่วยในด้าน software engineering เนื่องจากการทำงานร่วมกับของคนในทีมอาจจะเกิดความผิดพลาดขึ้นจากการไปแตะส่วนสำคัญของระบบ นอกจากนั้นแล้วยังสามารถใช้ทดสอบระบบได้อีกด้วย
