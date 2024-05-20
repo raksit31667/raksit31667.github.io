@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "goose-integration-testing-race-condition"
+title: "แก้ปัญหา race condition ของการ run database migration ใน integration test ของระบบภาษา Go"
 date: 2024-05-20
-tags: []
+tags: [database-migration, docker, go, goose, testing]
 ---
 
 เมื่ออาทิตย์ก่อนได้มี[โอกาสไปแบ่งปันประสบการณ์](https://medium.com/@jnuchit/%E0%B9%83%E0%B8%84%E0%B8%A3%E0%B9%84%E0%B8%A1%E0%B9%88-design-software-design-1ab127565cb0) ว่าด้วยเรื่องของ software engineering practice ผ่านการพัฒนาระบบด้วยภาษา Go ซึ่งเป็นส่วนนึงของ workshop 2 วัน เพื่อให้เห็นภาพของขั้นตอนการส่งมอบ software ว่าเป็นอย่างไรบ้าง จากนั้นทำการออกแบบระบบตาม requirement
