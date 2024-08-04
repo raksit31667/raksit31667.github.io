@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "สรุปสิ่งที่น่าสนใจจากงาน Invest or Gamble? การเงินนอกห้องเรียน"
-date: 2024-08-03
+date: 2024-08-04
 tags: [finance]
 ---
 
