@@ -2,7 +2,7 @@
 layout: post
 title: "ว่าด้วยเรื่องของ Platform Engineering Maturity Model"
 date: 2025-03-25
-tags: []
+tags: [platform, practice]
 ---
 
 [CNCF (Cloud Native Computing Foundation)](https://www.cncf.io/) ได้ publish [Platform Engineering Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/) เพื่อช่วยให้องค์กรสามารถวัดระดับความก้าวหน้าของ [platform](https://tag-app-delivery.cncf.io/whitepapers/platforms/) โดยแนวคิดนี้ช่วยให้ทีมงานสามารถพัฒนา platform ให้ตอบโจทย์ทั้งฝั่ง **Developers** และฝั่ง **Operations** ได้อย่างสมบูรณ์แบบ เราจะพาไปดูว่า Platform Engineering Maturity Model ของ CNCF มีอะไรบ้าง และองค์กรสามารถนำไปใช้ให้เกิดประโยชน์ได้อย่างไร
