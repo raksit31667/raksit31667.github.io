@@ -2,7 +2,7 @@
 layout: post
 title: "ว่าด้วยเรื่อง versioning ของ GitHub Actions reusable workflow"
 date: 2025-05-26
-tags: []
+tags: [github, cicd]
 ---
 
 ## GitHub Actions reusable workflow คืออะไร
