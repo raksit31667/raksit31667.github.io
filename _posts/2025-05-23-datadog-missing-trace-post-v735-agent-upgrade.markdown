@@ -35,7 +35,7 @@ tags: [datadog, kubernetes, dotnet]
 ## แล้วปัญหาจริง ๆ มันคืออะไร
 เพื่อจะเข้าใจว่าอะไรพัง เราต้องเข้าใจก่อนว่า Datadog มันทำงานยังไงในระดับโครงสร้าง
 
-![Datadog components](/assets/2023-05-23-datadog-components.png)
+![Datadog components](/assets/2025-05-23-datadog-components.png)
 <https://www.datadoghq.com/blog/monitoring-kubernetes-with-datadog/>
 
 1. **Datadog Agent**: ตัวนี้จะถูก deploy เป็น DaemonSet บน Kubernetes ทุก node มันเป็นคนเก็บ logs, metrics และ trace แล้วส่งขึ้น Datadog server
@@ -47,7 +47,7 @@ tags: [datadog, kubernetes, dotnet]
 ### นำเสนอพระเอกของเรา Trace sampling decision
 ในระบบที่มีปริมาณ traffic สูง การเก็บ trace ทุกตัวอาจทำให้เกิดภาระในการจัดเก็บและประมวลผลข้อมูล ดังนั้น Datadog Tracer จึงใช้กลไกที่เรียกว่า [head-based sampling](https://docs.datadoghq.com/tracing/trace_pipeline/ingestion_mechanisms/?tab=java#head-based-sampling) เพื่อตัดสินใจว่า trace ใดควรถูกส่งหรือทิ้ง โดยการตัดสินใจนี้เกิดขึ้นตั้งแต่ต้นทางของ request และถูกส่งต่อผ่าน HTTP headers ไปยัง downstream service ทั้งหมด
 
-![Head-based sampling](/assets/2023-05-23-head-based-sampling.avif)
+![Head-based sampling](/assets/2025-05-23-head-based-sampling.avif)
 <https://docs.datadoghq.com/tracing/trace_pipeline/ingestion_mechanisms/?tab=java#head-based-sampling>
 
 ในกรณีของ HTTP ตัว Tracer จะพิจารณาข้อมูลจาก HTTP headers เช่น:
