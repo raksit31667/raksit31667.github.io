@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kubernetes readiness probe กับ ALB health check ของมันต้องมีทั้งคู่ไหม"
-date: 2025-08-03
+date: 2025-08-05
 tags: [kubernetes, aws, infrastructure, networking]
 ---
 
