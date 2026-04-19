@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "eliminating-intermittent-api-latency-elasticache-serverless"
+title: "Eliminating Intermittent API Latency to ElastiCache Serverless"
 date: 2026-03-02
 tags: [aws, elasticache, dotnet]
 ---
