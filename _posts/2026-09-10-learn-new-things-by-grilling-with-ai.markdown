@@ -2,7 +2,7 @@
 layout: post
 title: "พัฒนาตนเองด้วยการเรียนรู้และฝึกทักษะใหม่จากการ grill กับ GenAI"
 date: 2026-09-10
-tags: []
+tags: [generative-ai, practice, aws, chaos-engineering]
 ---
 
 ช่วงที่ผ่านมาเราได้มีโอกาสได้จับงาน chaos engineering เพื่อให้ลูกค้าเห็นว่าระบบงานที่พัฒนาอยู่สามารถให้บริการต่อได้เมื่อเกิดเหตุไม่คาดคิดขึ้น (disaster) อาทิเช่น แผ่นดินไหว ไฟดับ data center ล่ม เป็นต้น ยิ่งเรามี requirement ให้สามารถ recover กับ disaster หลากหลายแบบได้เมื่อไร ก็ยิ่งมีค่าใช้จ่ายในการพัฒนาดูแลลระบบมากขึ้นเท่านั้น  
@@ -14,9 +14,9 @@ tags: []
 
 ใด ๆ คือคนเราอ่ะมันยากนะที่จะสามารถอธิบายว่าเราต้องการอะไรจริง ๆ (เรียกว่า Alignment Problem) ให้คนอื่นแล้วเราได้สิ่งที่ต้องการตามคาดหวังเป๊ะ ๆ อ่ะ ปัญหานี้มันไม่ได้เกิดแค่ระหว่างคน แต่ตอนนี้มันไปถึงคนกับ AI แล้ว เพื่อบรรเทาปัญหานี้เราจึงแนะนำให้ "สร้างความเข้าใจร่วมกันก่อน" นอกจากมันจะเพิ่มโอกาสให้ได้สิ่งที่ต้องการแล้ว ยังประหยัด token และ effort ในการ steer ให้ AI output ไม่ไปผิดที่ผิดทาง เพราะ effort มันจะไปอยู่ตอน "สร้างความเข้าใจร่วมกันก่อน" นั่นเอง  
 
-เราเริ่มงานจากการ research ก่อนว่าจะ simulate disaster ในระบบของเราที่ run บน AWS ได้ยังไง ซึ่งเราใช้ Claude บน session นึง ผลที่ได้คือใน AWS จะมี solution ชื่อ AWS Fault Injection Service (FIS)  
+เราเริ่มงานจากการ research ก่อนว่าจะ simulate disaster ในระบบของเราที่ run บน AWS ได้ยังไง ซึ่งเราใช้ [Claude](https://claude.ai/) บน session นึง ผลที่ได้คือใน AWS จะมี solution ชื่อ [AWS Fault Injection Service (FIS)](https://docs.aws.amazon.com/fis/latest/userguide/what-is.html)
 
-แน่นอนว่า AWS FIS ไม่ได้ไปสร้าง disaster จริง ๆ แต่จำลองอาการ disaster ด้วยการยิงหลาย actions พร้อมกัน แล้วปล่อยให้ actions เหล่านั้นหมดฤทธิ์หลังจากเวลาที่กำหนด แล้วจากนั้น AWS ก็จะ recover จากผลของ actions นั้น แล้วก็มี option ให้ดูว่าระบบ recover กลับมาได้ไหม ซึ่ง AWS ก็จะมี template ในการจำลอง disaster มาหลายสถานการณ์ พร้อมกับ actions ต่าง ๆ อย่างกรณีของเราก็จะทำการจำลองไฟดับใน 1 ใน 2 availability zones ก็จะจำลองบนพื้นฐานของ template [AZ Availability: Power Interruption](https://docs.aws.amazon.com/fis/latest/userguide/az-availability-scenario.html) 
+AWS FIS จำลองอาการ disaster ด้วยการยิงหลาย actions พร้อมกัน แล้วปล่อยให้ actions เหล่านั้นหมดฤทธิ์หลังจากเวลาที่กำหนด แล้วจากนั้น AWS ก็จะ recover จากผลของ actions นั้น แล้วก็มี option ให้ดูว่าระบบ recover กลับมาได้ไหม ซึ่ง AWS ก็จะมี template ในการจำลอง disaster มาหลายสถานการณ์ พร้อมกับ actions ต่าง ๆ อย่างกรณีของเราก็จะทำการจำลองไฟดับใน 1 ใน 2 availability zones ก็จะจำลองบนพื้นฐานของ template [AZ Availability: Power Interruption](https://docs.aws.amazon.com/fis/latest/userguide/az-availability-scenario.html) 
 
 - Stop EC2 instances ใน Availability Zone (AZ) เป้าหมาย
 - ห้ามไม่ให้ EC2 ที่มี capacity launch ขึ้่นมาใหม่ ใน AZ นั้น
@@ -274,7 +274,7 @@ Human->>Claude: "อ๋อ ใช่ ๆ service facet ต้องเป็น 
 
 > ตรงนี้เราก็ได้เรียนรู้ว่าการทดสอบก็ยังคงต้องมีอยู่เหมือนการพัฒนา software ทั่วไปแหละ มันแค่เปลี่ยนบริบทเปลี่ยนวิธีไปแค่นั้นเอง
 
-ขั้นตอนต่อมาคือเราจะต้องมี load generator เพื่อส่ง request เข้าไปที่ระบบที่จะทดสอบ ตรงนี้ทีมเราใช้ k6 script อยู่ละ ก็ส่งไปให้ Claude update runbook ก่อนหน้าด้วย 
+ขั้นตอนต่อมาคือเราจะต้องมี load generator เพื่อส่ง request เข้าไปที่ระบบที่จะทดสอบ ตรงนี้ทีมเราใช้ [k6](https://k6.io/) อยู่ละ ก็ส่งไปให้ Claude update runbook ก่อนหน้าด้วย 
 ซึ่งก็ไม่มีอะไรพิเศษ จากนั้นก็มีการบอก Claude ให้เจาะรายละเอียดเล็กน้อยเพิ่มเพื่อให้การ run มันสมบูรณ์ที่สุด  
 
 ### Step 5 - Run simulation จริง
